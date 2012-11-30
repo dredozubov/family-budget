@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21A541E91668BC8000B1F45E /* ExpenseCategory+Writer.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A541E81668BC8000B1F45E /* ExpenseCategory+Writer.m */; };
+		21A541EC1668C03400B1F45E /* ExpenseComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A541EB1668C03400B1F45E /* ExpenseComment.m */; };
+		21A541EF1668C07500B1F45E /* ExpenseComment+Writer.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A541EE1668C07500B1F45E /* ExpenseComment+Writer.m */; };
 		21E047CF166699F2001B866A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E047CE166699F2001B866A /* UIKit.framework */; };
 		21E047D1166699F2001B866A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E047D0166699F2001B866A /* Foundation.framework */; };
 		21E047D3166699F2001B866A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E047D2166699F2001B866A /* CoreGraphics.framework */; };
@@ -16,7 +19,6 @@
 		21E047E1166699F2001B866A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 21E047E0166699F2001B866A /* Default.png */; };
 		21E047E3166699F2001B866A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21E047E2166699F2001B866A /* Default@2x.png */; };
 		21E047E5166699F2001B866A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21E047E4166699F2001B866A /* Default-568h@2x.png */; };
-		21E047E8166699F2001B866A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21E047E6166699F2001B866A /* MainStoryboard.storyboard */; };
 		21E047EB166699F2001B866A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E047EA166699F2001B866A /* ViewController.m */; };
 		21E047F3166699F2001B866A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E047F2166699F2001B866A /* SenTestingKit.framework */; };
 		21E047F4166699F2001B866A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E047CE166699F2001B866A /* UIKit.framework */; };
@@ -24,12 +26,15 @@
 		21E047FD166699F2001B866A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21E047FB166699F2001B866A /* InfoPlist.strings */; };
 		21E04800166699F2001B866A /* familyFinanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E047FF166699F2001B866A /* familyFinanceTests.m */; };
 		21E0480B16672F53001B866A /* FinanceModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21E0480916672F53001B866A /* FinanceModel.xcdatamodeld */; };
-		21E0483C166753C3001B866A /* StorageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0483B166753C3001B866A /* StorageController.m */; };
-		21E0483F16675697001B866A /* ExpenseWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0483E16675697001B866A /* ExpenseWriter.m */; };
+		21E0483F16675697001B866A /* DatabaseWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0483E16675697001B866A /* DatabaseWriter.m */; };
 		21E0484816676053001B866A /* ExpenseCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0484716676053001B866A /* ExpenseCategory.m */; };
 		21E0484B16676053001B866A /* Expense.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0484A16676053001B866A /* Expense.m */; };
 		21E0484E16676053001B866A /* Currency.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0484D16676053001B866A /* Currency.m */; };
-		21E0485116676053001B866A /* ExpenseComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0485016676053001B866A /* ExpenseComment.m */; };
+		21E04854166761E3001B866A /* Expense+Writer.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E04853166761E3001B866A /* Expense+Writer.m */; };
+		21F6FFBB1668C5EC00C5C5AD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F6FFBA1668C5EC00C5C5AD /* CoreData.framework */; };
+		21F6FFBF1668CBDB00C5C5AD /* Currency+Writer.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F6FFBE1668CBDB00C5C5AD /* Currency+Writer.m */; };
+		21F6FFC41668D72100C5C5AD /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21F6FFC31668D72100C5C5AD /* Storyboard.storyboard */; };
+		21F6FFCC1668DAB400C5C5AD /* ExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F6FFCB1668DAB400C5C5AD /* ExpenseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +48,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		21A541E51668B87B00B1F45E /* familyFinance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = familyFinance.entitlements; sourceTree = "<group>"; };
+		21A541E71668BC8000B1F45E /* ExpenseCategory+Writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ExpenseCategory+Writer.h"; sourceTree = "<group>"; };
+		21A541E81668BC8000B1F45E /* ExpenseCategory+Writer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ExpenseCategory+Writer.m"; sourceTree = "<group>"; };
+		21A541EA1668C03400B1F45E /* ExpenseComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseComment.h; sourceTree = "<group>"; };
+		21A541EB1668C03400B1F45E /* ExpenseComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseComment.m; sourceTree = "<group>"; };
+		21A541ED1668C07400B1F45E /* ExpenseComment+Writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ExpenseComment+Writer.h"; sourceTree = "<group>"; };
+		21A541EE1668C07500B1F45E /* ExpenseComment+Writer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ExpenseComment+Writer.m"; sourceTree = "<group>"; };
 		21E047CA166699F2001B866A /* familyFinance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = familyFinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21E047CE166699F2001B866A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		21E047D0166699F2001B866A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -56,7 +68,6 @@
 		21E047E0166699F2001B866A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		21E047E2166699F2001B866A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		21E047E4166699F2001B866A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		21E047E7166699F2001B866A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		21E047E9166699F2001B866A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		21E047EA166699F2001B866A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		21E047F1166699F2001B866A /* familyFinanceTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = familyFinanceTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,18 +77,24 @@
 		21E047FE166699F2001B866A /* familyFinanceTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = familyFinanceTests.h; sourceTree = "<group>"; };
 		21E047FF166699F2001B866A /* familyFinanceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = familyFinanceTests.m; sourceTree = "<group>"; };
 		21E0480A16672F53001B866A /* FinanceModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinanceModel.xcdatamodel; sourceTree = "<group>"; };
-		21E0483A166753C2001B866A /* StorageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StorageController.h; path = ../StorageController.h; sourceTree = "<group>"; };
-		21E0483B166753C3001B866A /* StorageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StorageController.m; path = ../StorageController.m; sourceTree = "<group>"; };
-		21E0483D16675697001B866A /* ExpenseWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseWriter.h; sourceTree = "<group>"; };
-		21E0483E16675697001B866A /* ExpenseWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseWriter.m; sourceTree = "<group>"; };
+		21E0483D16675697001B866A /* DatabaseWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseWriter.h; sourceTree = "<group>"; };
+		21E0483E16675697001B866A /* DatabaseWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseWriter.m; sourceTree = "<group>"; };
 		21E0484616676053001B866A /* ExpenseCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseCategory.h; sourceTree = "<group>"; };
 		21E0484716676053001B866A /* ExpenseCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseCategory.m; sourceTree = "<group>"; };
 		21E0484916676053001B866A /* Expense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expense.h; sourceTree = "<group>"; };
 		21E0484A16676053001B866A /* Expense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expense.m; sourceTree = "<group>"; };
 		21E0484C16676053001B866A /* Currency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Currency.h; sourceTree = "<group>"; };
 		21E0484D16676053001B866A /* Currency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Currency.m; sourceTree = "<group>"; };
-		21E0484F16676053001B866A /* ExpenseComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseComment.h; sourceTree = "<group>"; };
-		21E0485016676053001B866A /* ExpenseComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseComment.m; sourceTree = "<group>"; };
+		21E04852166761E3001B866A /* Expense+Writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Expense+Writer.h"; sourceTree = "<group>"; };
+		21E04853166761E3001B866A /* Expense+Writer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Expense+Writer.m"; sourceTree = "<group>"; };
+		21F6FFBA1668C5EC00C5C5AD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		21F6FFBD1668CBDB00C5C5AD /* Currency+Writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Currency+Writer.h"; sourceTree = "<group>"; };
+		21F6FFBE1668CBDB00C5C5AD /* Currency+Writer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Currency+Writer.m"; sourceTree = "<group>"; };
+		21F6FFC11668CC3400C5C5AD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		21F6FFC21668CC3400C5C5AD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		21F6FFC31668D72100C5C5AD /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		21F6FFCA1668DAB400C5C5AD /* ExpenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseViewController.h; sourceTree = "<group>"; };
+		21F6FFCB1668DAB400C5C5AD /* ExpenseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21F6FFBB1668C5EC00C5C5AD /* CoreData.framework in Frameworks */,
 				21E047CF166699F2001B866A /* UIKit.framework in Frameworks */,
 				21E047D1166699F2001B866A /* Foundation.framework in Frameworks */,
 				21E047D3166699F2001B866A /* CoreGraphics.framework in Frameworks */,
@@ -126,6 +144,7 @@
 		21E047CD166699F2001B866A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				21F6FFBA1668C5EC00C5C5AD /* CoreData.framework */,
 				21E047CE166699F2001B866A /* UIKit.framework */,
 				21E047D0166699F2001B866A /* Foundation.framework */,
 				21E047D2166699F2001B866A /* CoreGraphics.framework */,
@@ -137,17 +156,17 @@
 		21E047D4166699F2001B866A /* familyFinance */ = {
 			isa = PBXGroup;
 			children = (
-				21E0483A166753C2001B866A /* StorageController.h */,
-				21E0483B166753C3001B866A /* StorageController.m */,
+				21F6FFC91668DA6B00C5C5AD /* views */,
+				21A541E51668B87B00B1F45E /* familyFinance.entitlements */,
 				21E047DD166699F2001B866A /* AppDelegate.h */,
 				21E047DE166699F2001B866A /* AppDelegate.m */,
 				21E04818166730DB001B866A /* storage */,
-				21E047E6166699F2001B866A /* MainStoryboard.storyboard */,
 				21E047E9166699F2001B866A /* ViewController.h */,
 				21E047EA166699F2001B866A /* ViewController.m */,
 				21E047D5166699F2001B866A /* Supporting Files */,
-				21E0483D16675697001B866A /* ExpenseWriter.h */,
-				21E0483E16675697001B866A /* ExpenseWriter.m */,
+				21E0483D16675697001B866A /* DatabaseWriter.h */,
+				21E0483E16675697001B866A /* DatabaseWriter.m */,
+				21F6FFC31668D72100C5C5AD /* Storyboard.storyboard */,
 			);
 			path = familyFinance;
 			sourceTree = "<group>";
@@ -189,16 +208,34 @@
 			isa = PBXGroup;
 			children = (
 				21E0480916672F53001B866A /* FinanceModel.xcdatamodeld */,
-				21E0484F16676053001B866A /* ExpenseComment.h */,
-				21E0485016676053001B866A /* ExpenseComment.m */,
+				21A541EA1668C03400B1F45E /* ExpenseComment.h */,
+				21A541EB1668C03400B1F45E /* ExpenseComment.m */,
+				21A541ED1668C07400B1F45E /* ExpenseComment+Writer.h */,
+				21A541EE1668C07500B1F45E /* ExpenseComment+Writer.m */,
 				21E0484C16676053001B866A /* Currency.h */,
 				21E0484D16676053001B866A /* Currency.m */,
-				21E0484916676053001B866A /* Expense.h */,
-				21E0484A16676053001B866A /* Expense.m */,
+				21F6FFBD1668CBDB00C5C5AD /* Currency+Writer.h */,
+				21F6FFBE1668CBDB00C5C5AD /* Currency+Writer.m */,
 				21E0484616676053001B866A /* ExpenseCategory.h */,
 				21E0484716676053001B866A /* ExpenseCategory.m */,
+				21A541E71668BC8000B1F45E /* ExpenseCategory+Writer.h */,
+				21A541E81668BC8000B1F45E /* ExpenseCategory+Writer.m */,
+				21E0484916676053001B866A /* Expense.h */,
+				21E0484A16676053001B866A /* Expense.m */,
+				21E04852166761E3001B866A /* Expense+Writer.h */,
+				21E04853166761E3001B866A /* Expense+Writer.m */,
 			);
 			name = storage;
+			sourceTree = "<group>";
+		};
+		21F6FFC91668DA6B00C5C5AD /* views */ = {
+			isa = PBXGroup;
+			children = (
+				21F6FFCA1668DAB400C5C5AD /* ExpenseViewController.h */,
+				21F6FFCB1668DAB400C5C5AD /* ExpenseViewController.m */,
+			);
+			name = views;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +292,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
+				ru,
 			);
 			mainGroup = 21E047BF166699F2001B866A;
 			productRefGroup = 21E047CB166699F2001B866A /* Products */;
@@ -276,7 +315,7 @@
 				21E047E1166699F2001B866A /* Default.png in Resources */,
 				21E047E3166699F2001B866A /* Default@2x.png in Resources */,
 				21E047E5166699F2001B866A /* Default-568h@2x.png in Resources */,
-				21E047E8166699F2001B866A /* MainStoryboard.storyboard in Resources */,
+				21F6FFC41668D72100C5C5AD /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,12 +354,16 @@
 				21E047DF166699F2001B866A /* AppDelegate.m in Sources */,
 				21E047EB166699F2001B866A /* ViewController.m in Sources */,
 				21E0480B16672F53001B866A /* FinanceModel.xcdatamodeld in Sources */,
-				21E0483C166753C3001B866A /* StorageController.m in Sources */,
-				21E0483F16675697001B866A /* ExpenseWriter.m in Sources */,
+				21E0483F16675697001B866A /* DatabaseWriter.m in Sources */,
 				21E0484816676053001B866A /* ExpenseCategory.m in Sources */,
 				21E0484B16676053001B866A /* Expense.m in Sources */,
 				21E0484E16676053001B866A /* Currency.m in Sources */,
-				21E0485116676053001B866A /* ExpenseComment.m in Sources */,
+				21E04854166761E3001B866A /* Expense+Writer.m in Sources */,
+				21A541E91668BC8000B1F45E /* ExpenseCategory+Writer.m in Sources */,
+				21A541EC1668C03400B1F45E /* ExpenseComment.m in Sources */,
+				21A541EF1668C07500B1F45E /* ExpenseComment+Writer.m in Sources */,
+				21F6FFBF1668CBDB00C5C5AD /* Currency+Writer.m in Sources */,
+				21F6FFCC1668DAB400C5C5AD /* ExpenseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,22 +390,16 @@
 			isa = PBXVariantGroup;
 			children = (
 				21E047D8166699F2001B866A /* en */,
+				21F6FFC11668CC3400C5C5AD /* ru */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		21E047E6166699F2001B866A /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				21E047E7166699F2001B866A /* en */,
-			);
-			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 		21E047FB166699F2001B866A /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				21E047FC166699F2001B866A /* en */,
+				21F6FFC21668CC3400C5C5AD /* ru */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -423,6 +460,7 @@
 		21E04804166699F2001B866A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = familyFinance/familyFinance.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "familyFinance/familyFinance-Prefix.pch";
 				INFOPLIST_FILE = "familyFinance/familyFinance-Info.plist";
@@ -434,6 +472,7 @@
 		21E04805166699F2001B866A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = familyFinance/familyFinance.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "familyFinance/familyFinance-Prefix.pch";
 				INFOPLIST_FILE = "familyFinance/familyFinance-Info.plist";
@@ -495,6 +534,7 @@
 				21E04805166699F2001B866A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		21E04806166699F2001B866A /* Build configuration list for PBXNativeTarget "familyFinanceTests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +543,7 @@
 				21E04808166699F2001B866A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

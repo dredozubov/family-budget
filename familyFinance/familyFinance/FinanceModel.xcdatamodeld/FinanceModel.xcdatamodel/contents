@@ -3,26 +3,30 @@
     <entity name="Currency" representedClassName="Currency" syncable="YES">
         <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dollar_relation" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="expense" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Expense" inverseName="currency" inverseEntity="Expense" syncable="YES"/>
     </entity>
     <entity name="Expense" representedClassName="Expense" syncable="YES">
         <attribute name="added_on" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="amount" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="category" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ExpenseCategory" syncable="YES"/>
-        <relationship name="comment" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ExpenseComment" syncable="YES"/>
-        <relationship name="currency" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Currency" syncable="YES"/>
+        <relationship name="category" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ExpenseCategory" inverseName="expense" inverseEntity="ExpenseCategory" syncable="YES"/>
+        <relationship name="comment" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ExpenseComment" inverseName="expense" inverseEntity="ExpenseComment" syncable="YES"/>
+        <relationship name="currency" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Currency" inverseName="expense" inverseEntity="Currency" syncable="YES"/>
     </entity>
-    <entity name="ExpenseCategory" representedClassName="ExpenseCategory" syncable="YES">
+    <entity name="ExpenseCategory" syncable="YES">
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="comment" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExpenseComment" inverseName="category" inverseEntity="ExpenseComment" syncable="YES"/>
+        <relationship name="expense" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Expense" inverseName="category" inverseEntity="Expense" syncable="YES"/>
     </entity>
     <entity name="ExpenseComment" representedClassName="ExpenseComment" syncable="YES">
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="category" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ExpenseCategory" syncable="YES"/>
+        <relationship name="category" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExpenseCategory" inverseName="comment" inverseEntity="ExpenseCategory" syncable="YES"/>
+        <relationship name="expense" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Expense" inverseName="comment" inverseEntity="Expense" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Expense" positionX="-7956" positionY="-5122" width="128" height="118"/>
-        <element name="ExpenseCategory" positionX="-7652" positionY="-5211" width="128" height="73"/>
-        <element name="Currency" positionX="-7706" positionY="-4887" width="128" height="73"/>
-        <element name="ExpenseComment" positionX="-7956" positionY="-5310" width="128" height="73"/>
+        <element name="Currency" positionX="-7749" positionY="-5038" width="128" height="88"/>
+        <element name="Expense" positionX="-7535" positionY="-5346" width="128" height="118"/>
+        <element name="ExpenseComment" positionX="-7992" positionY="-5328" width="128" height="88"/>
+        <element name="ExpenseCategory" positionX="-7758" positionY="-5463" width="128" height="103"/>
     </elements>
 </model>

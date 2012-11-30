@@ -15,7 +15,7 @@
 @interface MyTest : SenTestCase {
     NSManagedObjectModel *model;
     NSPersistentStoreCoordinator *coordinator;
-    NSPersistentStore *store;
+//    NSPersistentStore *store;
     NSManagedObjectContext *context;
 }
 @end

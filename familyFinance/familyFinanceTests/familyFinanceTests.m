@@ -24,9 +24,15 @@
     [super tearDown];
 }
 
-- (void)testExample
+//- (void)testExample
+//{
+//    STFail(@"Unit tests are not implemented yet in familyFinanceTests");
+//}
+
+- (void)testInsertCurrency
 {
-    STFail(@"Unit tests are not implemented yet in familyFinanceTests");
+    
+    STAssertNoThrow(<#expr#>, @"insert currency");
 }
 
 @end

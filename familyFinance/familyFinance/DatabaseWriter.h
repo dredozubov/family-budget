@@ -9,11 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "Expense.h"
 
-@interface ExpenseWriter : NSObject {
+@interface DatabaseWriter : NSObject {
     UIManagedDocument *financeDatabase;
 }
 
-- (id)initNew;
+- (id)initDB;
+
 
 @property (nonatomic, retain) UIManagedDocument *financeDatabase;
 

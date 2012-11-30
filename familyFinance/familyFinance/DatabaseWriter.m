@@ -6,29 +6,45 @@
 //  Copyright (c) 2012 Denis Redozubov. All rights reserved.
 //
 
-#import "ExpenseWriter.h"
+#import "DatabaseWriter.h"
 #import "Expense.h"
 #import "ExpenseComment.h"
 #import "ExpenseCategory.h"
 
-@implementation ExpenseWriter
+@implementation DatabaseWriter
 @synthesize financeDatabase = _financeDatabase;
 
 - (void)setupStorageController {
     //setupStorageController
 }
 
+- (void)fetchInitialDataIntoDocument:(UIManagedDocument *)document
+{
+    dispatch_queue_t fetchQ = dispatch_queue_create("DB fetcher", NULL);
+    dispatch_async(fetchQ, ^{
+        // reading initial fixtures
+        NSArray *data = nil;
+        
+        [document.managedObjectContext performBlock:^{
+            for (NSArray *table in data) {
+                // start creating objects in document's context
+            }
+        }];
+    });
+    dispatch_release(fetchQ);
+}
+
 - (void)useDocument {
     if (![[NSFileManager defaultManager] fileExistsAtPath:[self.financeDatabase.fileURL path]]) {
         [self.financeDatabase saveToURL:self.financeDatabase.fileURL forSaveOperation:UIDocumentSaveForCreating completionHandler:^(BOOL success) {
-             [self setupStorageController];
+              // db don't exist, it's THE place to populate it with initial data
         }];
     } else if (self.financeDatabase.documentState == UIDocumentStateClosed) {
         [self.financeDatabase openWithCompletionHandler:^(BOOL success) {
-            [self setupStorageController];
+            // error handling
         }];
     } else if (self.financeDatabase.documentState == UIDocumentStateNormal) {
-        [self setupStorageController];
+        // final setup, everything is ok
     }
 }
 
@@ -39,7 +55,7 @@
     }
 }
 
-- (id)initNew {
+- (id)initDB {
     // for use in ViewWillAppear()
     if (self = [super init]) {
         NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory: NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
