@@ -35,6 +35,7 @@
 		21F6FFBF1668CBDB00C5C5AD /* Currency+Writer.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F6FFBE1668CBDB00C5C5AD /* Currency+Writer.m */; };
 		21F6FFC41668D72100C5C5AD /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21F6FFC31668D72100C5C5AD /* Storyboard.storyboard */; };
 		21F6FFCC1668DAB400C5C5AD /* ExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F6FFCB1668DAB400C5C5AD /* ExpenseViewController.m */; };
+		21F6FFCD1668EBC500C5C5AD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F6FFBA1668C5EC00C5C5AD /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21F6FFCD1668EBC500C5C5AD /* CoreData.framework in Frameworks */,
 				21E047F3166699F2001B866A /* SenTestingKit.framework in Frameworks */,
 				21E047F4166699F2001B866A /* UIKit.framework in Frameworks */,
 				21E047F5166699F2001B866A /* Foundation.framework in Frameworks */,

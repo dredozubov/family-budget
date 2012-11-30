@@ -20,18 +20,18 @@
 
 - (void)fetchInitialDataIntoDocument:(UIManagedDocument *)document
 {
-    dispatch_queue_t fetchQ = dispatch_queue_create("DB fetcher", NULL);
-    dispatch_async(fetchQ, ^{
-        // reading initial fixtures
-        NSArray *data = nil;
-        
-        [document.managedObjectContext performBlock:^{
-            for (NSArray *table in data) {
-                // start creating objects in document's context
-            }
-        }];
-    });
-    dispatch_release(fetchQ);
+//    dispatch_queue_t fetchQ = dispatch_queue_create("DB fetcher", NULL);
+//    dispatch_async(fetchQ, ^{
+//        // reading initial fixtures
+//        NSArray *data = nil;
+//        
+//        [document.managedObjectContext performBlock:^{
+//            for (NSArray *table in data) {
+//                // start creating objects in document's context
+//            }
+//        }];
+//    });
+//    dispatch_release(fetchQ);
 }
 
 - (void)useDocument {
