@@ -2,7 +2,7 @@
 //  Expense.m
 //  familyFinance
 //
-//  Created by Denis Redozubov on 29.11.12.
+//  Created by Denis Redozubov on 04.12.12.
 //  Copyright (c) 2012 Denis Redozubov. All rights reserved.
 //
 
@@ -17,7 +17,7 @@
 @dynamic added_on;
 @dynamic amount;
 @dynamic category;
-@dynamic currency;
 @dynamic comment;
+@dynamic currency;
 
 @end

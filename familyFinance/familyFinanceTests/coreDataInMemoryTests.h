@@ -9,7 +9,7 @@
 #import <SenTestingKit/SenTestingKit.h>
 #import "DatabaseWriter.h"
 
-@interface familyFinanceTests : SenTestCase {
+@interface coreDataInMemoryTests : SenTestCase {
     NSManagedObjectModel *model;
     NSPersistentStoreCoordinator *coordinator;
     NSPersistentStore *store;
@@ -17,11 +17,3 @@
 }
 
 @end
-
-//@interface MyTest : SenTestCase {
-//    NSManagedObjectModel *model;
-//    NSPersistentStoreCoordinator *coordinator;
-//    NSPersistentStore *store;
-//    NSManagedObjectContext *context;
-//}
-//@end

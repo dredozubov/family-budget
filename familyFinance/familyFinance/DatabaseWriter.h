@@ -14,6 +14,14 @@
 }
 
 - (id)initDB;
+- (id)getExpenseCommentByText:(NSString *)text;
+- (id)getExpenseCategoryByName:(NSString *)name;
+- (id)getCurrencyByCode:(NSString *)code;
+- (void)insertExpenseCategoryWithName:(NSString *)name;
+- (NSManagedObjectContext *)context;
+- (NSArray *)getAllExpenses;
+- (NSArray *)getAllExpenseComments;
+- (NSArray *)getAllExpenseCategories;
 
 
 @property (nonatomic, retain) UIManagedDocument *financeDatabase;

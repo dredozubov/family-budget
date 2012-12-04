@@ -7,12 +7,30 @@
 //
 
 #import "AppDelegate.h"
+#import "DatabaseWriter.h"
+#import "ExpenseCategory+Writer.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    DatabaseWriter *dbWriter = [[DatabaseWriter alloc] initDB];
+    NSManagedObjectContext *context = [dbWriter context];
+    NSDictionary *dict1 = [[NSDictionary alloc] initWithObjectsAndKeys:
+                           @"food", @"name",
+                           nil];
+    [ExpenseCategory insertWithInfo:dict1 inManagedObjectContext:context];
+    NSDictionary *dict2 = [[NSDictionary alloc] initWithObjectsAndKeys:
+                           @"home", @"name",
+                           nil];
+    [ExpenseCategory insertWithInfo:dict2 inManagedObjectContext:context];
+    NSArray* results = [ExpenseCategory getAllInManagedContext:context];
+    
+    NSLog(@"-----------");
+    NSLog(@"%@", results);
+    NSLog(@"-----------");
+    
     return YES;
 }
 							

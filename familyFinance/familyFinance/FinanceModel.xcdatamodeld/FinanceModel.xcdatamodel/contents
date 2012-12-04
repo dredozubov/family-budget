@@ -12,13 +12,14 @@
         <relationship name="comment" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ExpenseComment" inverseName="expense" inverseEntity="ExpenseComment" syncable="YES"/>
         <relationship name="currency" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Currency" inverseName="expense" inverseEntity="Currency" syncable="YES"/>
     </entity>
-    <entity name="ExpenseCategory" syncable="YES">
-        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+    <entity name="ExpenseCategory" representedClassName="ExpenseCategory" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="comment" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExpenseComment" inverseName="category" inverseEntity="ExpenseComment" syncable="YES"/>
         <relationship name="expense" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Expense" inverseName="category" inverseEntity="Expense" syncable="YES"/>
     </entity>
     <entity name="ExpenseComment" representedClassName="ExpenseComment" syncable="YES">
+        <attribute name="rating" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="category" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExpenseCategory" inverseName="comment" inverseEntity="ExpenseCategory" syncable="YES"/>
         <relationship name="expense" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Expense" inverseName="comment" inverseEntity="Expense" syncable="YES"/>
@@ -26,7 +27,7 @@
     <elements>
         <element name="Currency" positionX="-7749" positionY="-5038" width="128" height="88"/>
         <element name="Expense" positionX="-7535" positionY="-5346" width="128" height="118"/>
-        <element name="ExpenseComment" positionX="-7992" positionY="-5328" width="128" height="88"/>
         <element name="ExpenseCategory" positionX="-7758" positionY="-5463" width="128" height="103"/>
+        <element name="ExpenseComment" positionX="-7992" positionY="-5328" width="128" height="103"/>
     </elements>
 </model>

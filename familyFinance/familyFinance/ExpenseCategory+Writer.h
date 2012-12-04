@@ -15,5 +15,6 @@ extern NSString * const EXPENSE_CATEGORY_IMAGE_DATA;
 
 + (void)insertWithInfo:(NSDictionary *)expenseCategoryInfo
       inManagedObjectContext:(NSManagedObjectContext *)context;
++ (NSArray *)getAllInManagedContext:(NSManagedObjectContext *)context;
 
 @end

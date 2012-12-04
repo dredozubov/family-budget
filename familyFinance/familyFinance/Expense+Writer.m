@@ -16,10 +16,6 @@ NSString * const EXPENSE_AMOUNT = @"amount";
       inManagedObjectContext:(NSManagedObjectContext *)context {
     Expense *expense = nil;
     
-//    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Expense"];
-//    request.predicate = [NSPredicate predicateWithFormat:@"blabla", [expense objectForKey:EXPENSE_ID]
-    
-    
     expense = [NSEntityDescription insertNewObjectForEntityForName:@"Expense" inManagedObjectContext:context];
     expense.amount = [expenseInfo objectForKey:EXPENSE_AMOUNT];
 

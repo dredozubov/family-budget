@@ -19,7 +19,7 @@ NSString * const EXPENSE_CATEGORY_IMAGE_DATA = @"image";
         
     expenseCategory = [NSEntityDescription insertNewObjectForEntityForName:@"ExpenseCategory" inManagedObjectContext:context];
     expenseCategory.name = [expenseCategoryInfo objectForKey:EXPENSE_CATEGORY_NAME];
-    expenseCategory.image = [expenseCategoryInfo objectForKey:EXPENSE_CATEGORY_IMAGE_DATA];
+    expenseCategory.rating = 0;
     
     NSError *error = nil;
     if (![context save:&error]) {
@@ -28,5 +28,18 @@ NSString * const EXPENSE_CATEGORY_IMAGE_DATA = @"image";
     }
 }
 
++ (NSArray *)getAllInManagedContext:(NSManagedObjectContext *)context
+{
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"ExpenseCategory"];
+    //    request.predicate = [NSPredicate predicateWithFormat:@"]
+    request.predicate = nil;
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"rating" ascending:YES];
+    request.sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+    
+    NSError *error = nil;
+    NSArray *records = [context executeFetchRequest:request error:&error];
+    
+    return records;
+}
 
 @end

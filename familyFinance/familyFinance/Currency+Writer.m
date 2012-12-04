@@ -10,4 +10,14 @@
 
 @implementation Currency (Writer)
 
++ (void)insertWithCode:(NSString *)code
+    inManagedObjectContext:(NSManagedObjectContext *)context
+{
+    Currency *currency = nil;
+    
+    currency = [NSEntityDescription insertNewObjectForEntityForName:@"Currency" inManagedObjectContext:context];
+    currency.code = code;
+    
+}
+
 @end

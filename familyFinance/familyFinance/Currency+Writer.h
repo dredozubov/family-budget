@@ -10,4 +10,7 @@
 
 @interface Currency (Writer)
 
++ (void)insertWithCode:(NSString *)code
+    inManagedObjectContext:(NSManagedObjectContext *)context;
+
 @end

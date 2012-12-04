@@ -24,9 +24,6 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="h1R-im-MYy" kind="push" id="kIf-60-0Ac"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -36,24 +33,35 @@
                             <constraint firstAttribute="trailing" secondItem="TS3-MY-WpD" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="rPP-rf-jIx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="ALG-Qy-QJN" kind="modal" identifier="new expense" id="dBb-8r-MdL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chQ-uW-yt4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="61" y="34"/>
         </scene>
-        <!--View Controller - Я потратил-->
-        <scene sceneID="sVx-So-kp3">
+        <!--Expense View Controller-->
+        <scene sceneID="G4U-TH-VEp">
             <objects>
-                <viewController id="h1R-im-MYy" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="T5K-W9-CaK">
+                <viewController id="ALG-Qy-QJN" customClass="ExpenseViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bx5-jp-c8A">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6aw-qD-wR9">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Hd-Vb-jCP">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="223" id="mu3-do-98K"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="на" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCo-mw-YbO">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Я потратил" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASl-zI-7IF">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="на" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1f-ae-Xic">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -61,26 +69,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6aw-qD-wR9" firstAttribute="leading" secondItem="T5K-W9-CaK" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="2CH-hM-sHV"/>
-                            <constraint firstAttribute="trailing" secondItem="uCo-mw-YbO" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="8Vs-Wc-TZA"/>
-                            <constraint firstItem="6aw-qD-wR9" firstAttribute="top" secondItem="T5K-W9-CaK" secondAttribute="top" constant="29" id="YC4-iq-Ooq"/>
-                            <constraint firstAttribute="trailing" secondItem="6aw-qD-wR9" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="wZJ-3G-mvx"/>
-                            <constraint firstItem="uCo-mw-YbO" firstAttribute="top" secondItem="T5K-W9-CaK" secondAttribute="top" constant="84" id="ygo-Sh-Uis"/>
-                            <constraint firstItem="uCo-mw-YbO" firstAttribute="leading" secondItem="T5K-W9-CaK" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="zyS-Ef-Ogy"/>
+                            <constraint firstItem="G1f-ae-Xic" firstAttribute="centerX" secondItem="8Hd-Vb-jCP" secondAttribute="centerX" type="default" id="CBP-Zu-eoR"/>
+                            <constraint firstItem="ASl-zI-7IF" firstAttribute="centerX" secondItem="bx5-jp-c8A" secondAttribute="centerX" type="default" id="EaL-e4-VIM"/>
+                            <constraint firstItem="ASl-zI-7IF" firstAttribute="centerX" secondItem="8Hd-Vb-jCP" secondAttribute="centerX" type="default" id="KV3-0O-pL9"/>
+                            <constraint firstItem="ASl-zI-7IF" firstAttribute="top" secondItem="bx5-jp-c8A" secondAttribute="top" constant="25" id="SYh-yE-QSH"/>
+                            <constraint firstItem="G1f-ae-Xic" firstAttribute="top" secondItem="bx5-jp-c8A" secondAttribute="top" constant="173" id="bk0-i4-uFa"/>
+                            <constraint firstItem="8Hd-Vb-jCP" firstAttribute="top" secondItem="bx5-jp-c8A" secondAttribute="top" constant="95" id="yLa-VG-9zf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Я потратил" id="BMo-b9-aRK"/>
+                    <navigationItem key="navigationItem" id="pZz-kf-gEd"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="So7-VB-C1e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Rg-oI-Qtk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="610" y="34"/>
+            <point key="canvasLocation" x="555" y="34"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
