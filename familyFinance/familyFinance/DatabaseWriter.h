@@ -7,23 +7,29 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Expense.h"
+#import "ExpenseCommentAPI.h"
+#import "ExpenseCategoryAPI.h"
+#import "CurrencyAPI.h"
 
 @interface DatabaseWriter : NSObject {
-    UIManagedDocument *financeDatabase;
+    UIManagedDocument *document;
 }
 
-- (id)initDB;
-- (id)getExpenseCommentByText:(NSString *)text;
-- (id)getExpenseCategoryByName:(NSString *)name;
-- (id)getCurrencyByCode:(NSString *)code;
-- (void)insertExpenseCategoryWithName:(NSString *)name;
+- (id)init;
 - (NSManagedObjectContext *)context;
-- (NSArray *)getAllExpenses;
-- (NSArray *)getAllExpenseComments;
-- (NSArray *)getAllExpenseCategories;
+//- (id)getExpenseCommentByText:(NSString *)text;
+//- (id)getExpenseCategoryByName:(NSString *)name;
+//- (id)getCurrencyByCode:(NSString *)code;
 
 
-@property (nonatomic, retain) UIManagedDocument *financeDatabase;
+
+@property (nonatomic, retain) UIManagedDocument *document;
+
+@property (nonatomic) BOOL ready;
+
+//@property (nonatomic, retain) ExpenseAPI *expense;
+@property (nonatomic, retain) ExpenseCommentAPI *expenseComment;
+@property (nonatomic, retain) ExpenseCategoryAPI *expenseCategory;
+@property (nonatomic, retain) CurrencyAPI *currency;
 
 @end

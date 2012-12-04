@@ -1,5 +1,5 @@
 //
-//  ExpenseComment+Writer.h
+//  ExpenseCommentAPI.h
 //  familyFinance
 //
 //  Created by Denis Redozubov on 30.11.12.
@@ -7,13 +7,15 @@
 //
 
 #import "ExpenseComment.h"
+#import "DBAPI.h"
 
 extern NSString * const EXPENSE_COMMENT_TEXT;
 extern NSString * const EXPENSE_COMMENT_CATEGORY;
 
-@interface ExpenseComment (Writer)
+@interface ExpenseCommentAPI: DBAPI
 
-+ (void)insertWithInfo:(NSDictionary *)expenseCommentInfo
-             inManagedObjectContext:(NSManagedObjectContext *)context;
+- (void)insertWithInfo:(NSDictionary *)expenseCommentInfo;
+- (void)insertWithInfo:(NSDictionary *)expenseCommentInfo inManagedObjectContext:context;
 
 @end
+

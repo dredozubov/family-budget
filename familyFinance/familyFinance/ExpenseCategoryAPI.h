@@ -1,5 +1,5 @@
 //
-//  ExpenseCategory+Writer.h
+//  ExpenseCategoryAPI.h
 //  familyFinance
 //
 //  Created by Denis Redozubov on 30.11.12.
@@ -7,14 +7,14 @@
 //
 
 #import "ExpenseCategory.h"
+#import "DBAPI.h"
 
 extern NSString * const EXPENSE_CATEGORY_NAME;
 extern NSString * const EXPENSE_CATEGORY_IMAGE_DATA;
 
-@interface ExpenseCategory (Writer)
+@interface ExpenseCategoryAPI: DBAPI
 
-+ (void)insertWithInfo:(NSDictionary *)expenseCategoryInfo
-      inManagedObjectContext:(NSManagedObjectContext *)context;
-+ (NSArray *)getAllInManagedContext:(NSManagedObjectContext *)context;
+- (void)insertWithName:(NSString *)name;
+//- (NSArray *)findAll;
 
 @end

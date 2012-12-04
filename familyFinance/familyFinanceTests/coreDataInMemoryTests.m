@@ -7,8 +7,7 @@
 //
 
 #import "coreDataInMemoryTests.h"
-#import "ExpenseComment+Writer.h"
-#import "ExpenseCategory+Writer.h"
+#import "ExpenseCategoryAPI.h"
 
 
 @implementation coreDataInMemoryTests
@@ -43,40 +42,12 @@
     STAssertNotNil(store, @"no persistent store");
 }
 
-//- (void)testInsertCurrencyOK
-//{
-//    NSDictionary *dict = [[NSDictionary alloc] initWithObjectsAndKeys:
-//                          @"my very first test comment", @"text",
-//                          nil];
-//    STAssertNoThrow([ExpenseComment insertWithInfo:dict inManagedObjectContext:context], @"insert currency OK");
-//}
-
-//- (void)testInsertCurrencyBrokenDictFAIL
-//{
-//    NSDictionary *dict = [[NSDictionary alloc] initWithObjectsAndKeys:
-//                          @"my very first test comment", @"failedkey",
-//                          nil];
-//    STAssertThrows([ExpenseComment insertWithInfo:dict inManagedObjectContext:context], @"insert currency FAILED");
-//}
-
-- (void)testInsertExpenseCategoryOK
+- (void)testDBAPISubClassing
 {
-    NSDictionary *dict1 = [[NSDictionary alloc] initWithObjectsAndKeys:
-                          @"food", @"name",
-                          nil];
-    [ExpenseCategory insertWithInfo:dict1 inManagedObjectContext:context];
-    NSDictionary *dict2 = [[NSDictionary alloc] initWithObjectsAndKeys:
-                           @"home", @"name",
-                           nil];
-    [ExpenseCategory insertWithInfo:dict2 inManagedObjectContext:context];
-    NSArray *results = [ExpenseCategory getAllInManagedContext:context];
-    
-    NSLog(@"-----------");
-    NSLog(@"%@", results);
-    NSLog(@"-----------");
-
-    STAssertTrue([results count] == 2, @"ExpenseCategory insert and select");
+    ExpenseCategoryAPI *expenseCategory = [[ExpenseCategoryAPI alloc] initWithContext:context];
+    NSArray *results = [expenseCategory findAll];
+    NSAssert1([results count] == 0, @"DBAPI Subclassing", nil);
+    NSLog(@"Results: %@", results);
 }
-
 
 @end

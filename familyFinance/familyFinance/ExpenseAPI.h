@@ -1,5 +1,5 @@
 //
-//  Expense+Writer.h
+//  ExpenseAPI.h
 //  familyFinance
 //
 //  Created by Denis Redozubov on 29.11.12.
@@ -7,12 +7,12 @@
 //
 
 #import "Expense.h"
+#import "DBAPI.h"
 
 extern NSString * const EXPENSE_AMOUNT;
 
-@interface Expense (Writer)
+@interface ExpenseAPI: DBAPI
 
-+ (void)insertWithInfo:(NSDictionary *)expenseInfo
-      inManagedObjectContext:(NSManagedObjectContext *)context;
+- (void)insertWithInfo:(NSDictionary *)expenseInfo;
 
 @end

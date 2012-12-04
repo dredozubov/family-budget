@@ -7,16 +7,42 @@
 //
 
 #import "DatabaseWriter.h"
-#import "Expense.h"
-#import "ExpenseComment.h"
-#import "ExpenseCategory.h"
+#import "CurrencyAPI.h"
+#import "ExpenseCommentAPI.h"
+#import "ExpenseCategoryAPI.h"
 
 @implementation DatabaseWriter
+ 
+@synthesize document = _document;
+@synthesize ready = _ready;
 
-@synthesize financeDatabase = _financeDatabase;
 
-- (void)setupStorageController {
-    //setupStorageController
+- (id)init {
+    // for use in ViewWillAppear()
+    if (self = [super init]) {
+        NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory: NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+        url = [url URLByAppendingPathComponent: @"FinanceDB"];
+        self.document = [[UIManagedDocument alloc] initWithFileURL: url];
+        self.expenseCategory = [[ExpenseCategoryAPI alloc] initWithContext:self.context];
+        self.expenseComment = [[ExpenseCommentAPI alloc] initWithContext:self.context];
+        self.currency = [[CurrencyAPI alloc] initWithContext:self.context];
+    }
+    return self;
+}
+
+- (void)documentIsReady
+{
+    if (self.document.documentState == UIDocumentStateNormal) { // last line of defense
+        self.ready = YES;
+    } else {
+        self.ready = NO;
+    }
+
+}
+
+- (void)documentIsNotReady
+{
+    self.ready = NO;
 }
 
 - (void)fetchInitialDataIntoDocument:(UIManagedDocument *)document
@@ -28,7 +54,7 @@
         NSArray *data = nil;
         
         // core data manipulations must be made in thread with context, so...
-        [document.managedObjectContext performBlock:^{
+        [self.document.managedObjectContext performBlock:^{
             for (NSArray *table in data) {
                 // start creating objects in document's context
             }
@@ -40,77 +66,40 @@
 }
 
 - (void)useDocument {
-    if (![[NSFileManager defaultManager] fileExistsAtPath:[self.financeDatabase.fileURL path]]) {
-        [self.financeDatabase saveToURL:self.financeDatabase.fileURL forSaveOperation:UIDocumentSaveForCreating completionHandler:^(BOOL success) {
-              // db don't exist, it's THE place to populate it with initial data
-            NSLog(@"don't exist");
+    if (![[NSFileManager defaultManager] fileExistsAtPath:[self.document.fileURL path]]) {
+        NSURL *url = self.document.fileURL;
+        [self.document saveToURL:url forSaveOperation:UIDocumentSaveForCreating completionHandler:^(BOOL success) {
+            if (success)
+            {
+                [self documentIsReady];
+                // db don't exist, it's THE place to populate it with initial data
+            } else
+            {
+                NSLog(@"couldn't open document at %@", url);
+            }
         }];
-    } else if (self.financeDatabase.documentState == UIDocumentStateClosed) {
-        [self.financeDatabase openWithCompletionHandler:^(BOOL success) {
+    } else if (self.document.documentState == UIDocumentStateClosed) {
+        [self.document openWithCompletionHandler:^(BOOL success) {
             // error handling
-            NSLog(@"logging error in DatabaseWriter");
+            [self documentIsNotReady];
+            NSLog(@"logging error: UIDocumentStateClosed");
         }];
-    } else if (self.financeDatabase.documentState == UIDocumentStateNormal) {
-        // final setup, everything is ok
+    } else if (self.document.documentState == UIDocumentStateNormal) {
+        [self documentIsReady];
         NSLog(@"DatabaseWriter OK");
     }
 }
 
-- (void)setFinanceDatabase:(UIManagedDocument *)fDatabase {
-    if (_financeDatabase != fDatabase) {
-        _financeDatabase = fDatabase;
+- (void)setdocument:(UIManagedDocument *)fDatabase {
+    if (_document != fDatabase) {
+        _document = fDatabase;
         [self useDocument];
     }
 }
 
 - (NSManagedObjectContext *)context
 {
-    return self.financeDatabase.managedObjectContext;
-}
-
-- (id)initDB {
-    // for use in ViewWillAppear()
-    if (self = [super init]) {
-        NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory: NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
-        url = [url URLByAppendingPathComponent: @"FinanceDB"];
-        self.financeDatabase = [[UIManagedDocument alloc] initWithFileURL: url];
-    }
-    return self;
-}
-
-//
-// queries API
-//
-
-- (void)insertExpenseCategoryWithName:(NSString *)name
-{
-    ExpenseCategory *expenseCategory = nil;
-    NSManagedObjectContext *context = self.financeDatabase.managedObjectContext;
-    
-    expenseCategory = [NSEntityDescription insertNewObjectForEntityForName:@"ExpenseCategory" inManagedObjectContext:context];
-    expenseCategory.name = name;
-//    expenseCategory.image = [NSData];
-    
-    NSError *error = nil;
-    if (![context save:&error]) {
-        NSLog(@"Error while inserting new ExpenseCategory: %@, %@", error, [error userInfo]);
-        abort();
-    }
-}
-
-
-- (NSArray *)getAllExpenseCategories
-{
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"ExpenseCategory"];
-//    request.predicate = [NSPredicate predicateWithFormat:@"]
-    request.predicate = nil;
-    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
-    request.sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
-    
-    NSError *error = nil;
-    NSArray *records = [self.financeDatabase.managedObjectContext executeFetchRequest:request error:&error];
-    
-    return records;
+    return self.document.managedObjectContext;
 }
 
 @end

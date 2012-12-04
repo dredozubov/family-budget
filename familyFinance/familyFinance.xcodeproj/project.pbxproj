@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21A541E91668BC8000B1F45E /* ExpenseCategory+Writer.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A541E81668BC8000B1F45E /* ExpenseCategory+Writer.m */; };
-		21A541EF1668C07500B1F45E /* ExpenseComment+Writer.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A541EE1668C07500B1F45E /* ExpenseComment+Writer.m */; };
+		214B258B166E311300B7AB5B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F6FFBA1668C5EC00C5C5AD /* CoreData.framework */; };
+		21A541E91668BC8000B1F45E /* ExpenseCategoryAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A541E81668BC8000B1F45E /* ExpenseCategoryAPI.m */; };
+		21A541EF1668C07500B1F45E /* ExpenseCommentAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A541EE1668C07500B1F45E /* ExpenseCommentAPI.m */; };
 		21E047CF166699F2001B866A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E047CE166699F2001B866A /* UIKit.framework */; };
 		21E047D1166699F2001B866A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E047D0166699F2001B866A /* Foundation.framework */; };
 		21E047D3166699F2001B866A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E047D2166699F2001B866A /* CoreGraphics.framework */; };
@@ -26,16 +27,16 @@
 		21E0480B16672F53001B866A /* FinanceModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21E0480916672F53001B866A /* FinanceModel.xcdatamodeld */; };
 		21E0483F16675697001B866A /* DatabaseWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0483E16675697001B866A /* DatabaseWriter.m */; };
 		21E0484E16676053001B866A /* Currency.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0484D16676053001B866A /* Currency.m */; };
-		21E04854166761E3001B866A /* Expense+Writer.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E04853166761E3001B866A /* Expense+Writer.m */; };
+		21E04854166761E3001B866A /* ExpenseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E04853166761E3001B866A /* ExpenseAPI.m */; };
 		21F6FFBB1668C5EC00C5C5AD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F6FFBA1668C5EC00C5C5AD /* CoreData.framework */; };
-		21F6FFBF1668CBDB00C5C5AD /* Currency+Writer.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F6FFBE1668CBDB00C5C5AD /* Currency+Writer.m */; };
+		21F6FFBF1668CBDB00C5C5AD /* CurrencyAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F6FFBE1668CBDB00C5C5AD /* CurrencyAPI.m */; };
 		21F6FFC41668D72100C5C5AD /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21F6FFC31668D72100C5C5AD /* Storyboard.storyboard */; };
 		21F6FFCC1668DAB400C5C5AD /* ExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F6FFCB1668DAB400C5C5AD /* ExpenseViewController.m */; };
-		21F6FFCD1668EBC500C5C5AD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F6FFBA1668C5EC00C5C5AD /* CoreData.framework */; };
 		21F95B10166BBA610045AE2E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F95B0F166BBA610045AE2E /* RootViewController.m */; };
 		21F95B13166DDDD80045AE2E /* ExpenseCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F95B12166DDDD80045AE2E /* ExpenseCategory.m */; };
 		21F95B16166DDDD90045AE2E /* ExpenseComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F95B15166DDDD90045AE2E /* ExpenseComment.m */; };
 		21F95B19166DDE8E0045AE2E /* Expense.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F95B18166DDE8E0045AE2E /* Expense.m */; };
+		21F95B1C166DE4500045AE2E /* DBAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F95B1B166DE4500045AE2E /* DBAPI.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,10 +51,10 @@
 
 /* Begin PBXFileReference section */
 		21A541E51668B87B00B1F45E /* familyFinance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = familyFinance.entitlements; sourceTree = "<group>"; };
-		21A541E71668BC8000B1F45E /* ExpenseCategory+Writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ExpenseCategory+Writer.h"; sourceTree = "<group>"; };
-		21A541E81668BC8000B1F45E /* ExpenseCategory+Writer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ExpenseCategory+Writer.m"; sourceTree = "<group>"; };
-		21A541ED1668C07400B1F45E /* ExpenseComment+Writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ExpenseComment+Writer.h"; sourceTree = "<group>"; };
-		21A541EE1668C07500B1F45E /* ExpenseComment+Writer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ExpenseComment+Writer.m"; sourceTree = "<group>"; };
+		21A541E71668BC8000B1F45E /* ExpenseCategoryAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpenseCategoryAPI.h; path = familyFinance/ExpenseCategoryAPI.h; sourceTree = "<group>"; };
+		21A541E81668BC8000B1F45E /* ExpenseCategoryAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpenseCategoryAPI.m; path = familyFinance/ExpenseCategoryAPI.m; sourceTree = "<group>"; };
+		21A541ED1668C07400B1F45E /* ExpenseCommentAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpenseCommentAPI.h; path = familyFinance/ExpenseCommentAPI.h; sourceTree = "<group>"; };
+		21A541EE1668C07500B1F45E /* ExpenseCommentAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpenseCommentAPI.m; path = familyFinance/ExpenseCommentAPI.m; sourceTree = "<group>"; };
 		21E047CA166699F2001B866A /* familyFinance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = familyFinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21E047CE166699F2001B866A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		21E047D0166699F2001B866A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -78,11 +79,11 @@
 		21E0483E16675697001B866A /* DatabaseWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseWriter.m; sourceTree = "<group>"; };
 		21E0484C16676053001B866A /* Currency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Currency.h; sourceTree = "<group>"; };
 		21E0484D16676053001B866A /* Currency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Currency.m; sourceTree = "<group>"; };
-		21E04852166761E3001B866A /* Expense+Writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Expense+Writer.h"; sourceTree = "<group>"; };
-		21E04853166761E3001B866A /* Expense+Writer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Expense+Writer.m"; sourceTree = "<group>"; };
+		21E04852166761E3001B866A /* ExpenseAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpenseAPI.h; path = familyFinance/ExpenseAPI.h; sourceTree = "<group>"; };
+		21E04853166761E3001B866A /* ExpenseAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpenseAPI.m; path = familyFinance/ExpenseAPI.m; sourceTree = "<group>"; };
 		21F6FFBA1668C5EC00C5C5AD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		21F6FFBD1668CBDB00C5C5AD /* Currency+Writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Currency+Writer.h"; sourceTree = "<group>"; };
-		21F6FFBE1668CBDB00C5C5AD /* Currency+Writer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Currency+Writer.m"; sourceTree = "<group>"; };
+		21F6FFBD1668CBDB00C5C5AD /* CurrencyAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CurrencyAPI.h; path = familyFinance/CurrencyAPI.h; sourceTree = "<group>"; };
+		21F6FFBE1668CBDB00C5C5AD /* CurrencyAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CurrencyAPI.m; path = familyFinance/CurrencyAPI.m; sourceTree = "<group>"; };
 		21F6FFC11668CC3400C5C5AD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		21F6FFC21668CC3400C5C5AD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		21F6FFC31668D72100C5C5AD /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
@@ -96,6 +97,8 @@
 		21F95B15166DDDD90045AE2E /* ExpenseComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseComment.m; sourceTree = "<group>"; };
 		21F95B17166DDE8D0045AE2E /* Expense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expense.h; sourceTree = "<group>"; };
 		21F95B18166DDE8E0045AE2E /* Expense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expense.m; sourceTree = "<group>"; };
+		21F95B1A166DE4500045AE2E /* DBAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBAPI.h; path = familyFinance/DBAPI.h; sourceTree = "<group>"; };
+		21F95B1B166DE4500045AE2E /* DBAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBAPI.m; path = familyFinance/DBAPI.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21F6FFCD1668EBC500C5C5AD /* CoreData.framework in Frameworks */,
+				214B258B166E311300B7AB5B /* CoreData.framework in Frameworks */,
 				21E047F3166699F2001B866A /* SenTestingKit.framework in Frameworks */,
 				21E047F4166699F2001B866A /* UIKit.framework in Frameworks */,
 				21E047F5166699F2001B866A /* Foundation.framework in Frameworks */,
@@ -164,7 +167,8 @@
 				21A541E51668B87B00B1F45E /* familyFinance.entitlements */,
 				21E047DD166699F2001B866A /* AppDelegate.h */,
 				21E047DE166699F2001B866A /* AppDelegate.m */,
-				21E04818166730DB001B866A /* storage */,
+				21F95B1D166E0A1B0045AE2E /* storageAPI */,
+				21E04818166730DB001B866A /* storageModels */,
 				21E047D5166699F2001B866A /* Supporting Files */,
 				21E0483D16675697001B866A /* DatabaseWriter.h */,
 				21E0483E16675697001B866A /* DatabaseWriter.m */,
@@ -206,7 +210,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		21E04818166730DB001B866A /* storage */ = {
+		21E04818166730DB001B866A /* storageModels */ = {
 			isa = PBXGroup;
 			children = (
 				21E0480916672F53001B866A /* FinanceModel.xcdatamodeld */,
@@ -216,18 +220,10 @@
 				21F95B15166DDDD90045AE2E /* ExpenseComment.m */,
 				21F95B11166DDDD80045AE2E /* ExpenseCategory.h */,
 				21F95B12166DDDD80045AE2E /* ExpenseCategory.m */,
-				21A541ED1668C07400B1F45E /* ExpenseComment+Writer.h */,
-				21A541EE1668C07500B1F45E /* ExpenseComment+Writer.m */,
 				21E0484C16676053001B866A /* Currency.h */,
 				21E0484D16676053001B866A /* Currency.m */,
-				21F6FFBD1668CBDB00C5C5AD /* Currency+Writer.h */,
-				21F6FFBE1668CBDB00C5C5AD /* Currency+Writer.m */,
-				21A541E71668BC8000B1F45E /* ExpenseCategory+Writer.h */,
-				21A541E81668BC8000B1F45E /* ExpenseCategory+Writer.m */,
-				21E04852166761E3001B866A /* Expense+Writer.h */,
-				21E04853166761E3001B866A /* Expense+Writer.m */,
 			);
-			name = storage;
+			name = storageModels;
 			sourceTree = "<group>";
 		};
 		21F6FFC91668DA6B00C5C5AD /* views */ = {
@@ -237,6 +233,24 @@
 				21F6FFCB1668DAB400C5C5AD /* ExpenseViewController.m */,
 			);
 			name = views;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		21F95B1D166E0A1B0045AE2E /* storageAPI */ = {
+			isa = PBXGroup;
+			children = (
+				21A541ED1668C07400B1F45E /* ExpenseCommentAPI.h */,
+				21A541EE1668C07500B1F45E /* ExpenseCommentAPI.m */,
+				21F6FFBD1668CBDB00C5C5AD /* CurrencyAPI.h */,
+				21F6FFBE1668CBDB00C5C5AD /* CurrencyAPI.m */,
+				21A541E71668BC8000B1F45E /* ExpenseCategoryAPI.h */,
+				21A541E81668BC8000B1F45E /* ExpenseCategoryAPI.m */,
+				21E04852166761E3001B866A /* ExpenseAPI.h */,
+				21E04853166761E3001B866A /* ExpenseAPI.m */,
+				21F95B1A166DE4500045AE2E /* DBAPI.h */,
+				21F95B1B166DE4500045AE2E /* DBAPI.m */,
+			);
+			name = storageAPI;
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -357,15 +371,16 @@
 				21E0480B16672F53001B866A /* FinanceModel.xcdatamodeld in Sources */,
 				21E0483F16675697001B866A /* DatabaseWriter.m in Sources */,
 				21E0484E16676053001B866A /* Currency.m in Sources */,
-				21E04854166761E3001B866A /* Expense+Writer.m in Sources */,
-				21A541E91668BC8000B1F45E /* ExpenseCategory+Writer.m in Sources */,
-				21A541EF1668C07500B1F45E /* ExpenseComment+Writer.m in Sources */,
-				21F6FFBF1668CBDB00C5C5AD /* Currency+Writer.m in Sources */,
+				21E04854166761E3001B866A /* ExpenseAPI.m in Sources */,
+				21A541E91668BC8000B1F45E /* ExpenseCategoryAPI.m in Sources */,
+				21A541EF1668C07500B1F45E /* ExpenseCommentAPI.m in Sources */,
+				21F6FFBF1668CBDB00C5C5AD /* CurrencyAPI.m in Sources */,
 				21F6FFCC1668DAB400C5C5AD /* ExpenseViewController.m in Sources */,
 				21F95B10166BBA610045AE2E /* RootViewController.m in Sources */,
 				21F95B13166DDDD80045AE2E /* ExpenseCategory.m in Sources */,
 				21F95B16166DDDD90045AE2E /* ExpenseComment.m in Sources */,
 				21F95B19166DDE8E0045AE2E /* Expense.m in Sources */,
+				21F95B1C166DE4500045AE2E /* DBAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
