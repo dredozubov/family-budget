@@ -45,19 +45,105 @@
     self.ready = NO;
 }
 
-- (void)fetchInitialDataIntoDocument:(UIManagedDocument *)document
+
+- (void)fetchInitialDataIntoDocument
 {
-    dispatch_queue_t fetchQ = dispatch_queue_create("DB fetcher", NULL);
+    dispatch_queue_t fetchQ = dispatch_queue_create("DB", NULL);
     // reading our initial data storage in another thread
     dispatch_async(fetchQ, ^{
-        // reading initial fixtures
-        NSArray *data = nil;
+        NSLog(@"Prepopulating Database!");
+        
+        
+        // TODO: change it to YAML of JSON fixture
+        // gigantic coded fixture
+        NSArray *currencies = [NSArray arrayWithObjects:
+                               [NSDictionary dictionaryWithObjectsAndKeys:
+                                @"RUB", @"code",nil],
+                               [NSDictionary dictionaryWithObjectsAndKeys:
+                                @"USD", @"code",nil],
+                               nil];
+        
+        NSArray *expenseCategories = [NSArray arrayWithObjects:
+                                      [NSDictionary dictionaryWithObjectsAndKeys:
+                                       @"food", @"name",
+                                       0, @"rating", nil],
+                                      [NSDictionary dictionaryWithObjectsAndKeys:
+                                       @"health", @"name",
+                                       0, @"rating", nil],
+                                      [NSDictionary dictionaryWithObjectsAndKeys:
+                                       @"personal use", @"name",
+                                       0, @"rating", nil],
+                                      nil];
+        
+        // relations
+        // TODO: doesn't work, change to fetched NSManagedObjects
+        ExpenseCategory *foodCategory =
+            [NSEntityDescription insertNewObjectForEntityForName:@"ExpenseCategory" inManagedObjectContext:self.context];
+        foodCategory.name = @"food";
+        foodCategory.rating = 0;
+        
+        ExpenseCategory *personalCategory =
+        [NSEntityDescription insertNewObjectForEntityForName:@"ExpenseCategory" inManagedObjectContext:self.context];
+        foodCategory.name = @"personal use";
+        foodCategory.rating = 0;
+        
+        Currency *usdCurrency =
+            [NSEntityDescription insertNewObjectForEntityForName:@"Currency" inManagedObjectContext:self.context];
+        usdCurrency.code = @"USD";
+        
+//        ExpenseComment *familyfinanceComment =
+//            [NSEntityDescription insertNewObjectForEntityForName:@"ExpenseComment" inManagedObjectContext:self.context];
+//        familyfinanceComment.text = @"this very software!";
+//        familyfinanceComment.rating = 0;
+//        familyfinanceComment.category = personalCategory;
+
+        // end
+
+        NSArray *expenseComments = [NSArray arrayWithObjects:
+                                    [NSDictionary dictionaryWithObjectsAndKeys:
+                                     @"coffeeshop", @"text",
+                                     0, @"rating",
+                                     foodCategory, @"category",
+                                     nil],
+                                    [NSDictionary dictionaryWithObjectsAndKeys:
+                                     @"mall", @"text",
+                                     0, @"rating",
+                                     foodCategory, @"category",
+                                     nil],
+                                    [NSDictionary dictionaryWithObjectsAndKeys:
+                                     @"software", @"text",
+                                     0, @"rating",
+                                     personalCategory, @"category",
+                                     nil],
+
+                                    nil];
+        
+//        NSArray *expenses = [NSArray arrayWithObjects:
+//                             [NSDictionary dictionaryWithObjectsAndKeys:
+//                              [NSNumber numberWithDouble:5.0], @"amount",
+//                              [NSDate date], @"added_on",
+//                              personalCategory, @"category",
+//                              usdCurrency, @"currency",
+//                              familyfinanceComment, @"comment",
+//                              nil],
+//                             nil];
+        
+//        NSArray *data = [NSArray arrayWithObjects:
+//                         currencies, expenseCategories, expenseComments,
+//                         nil];
         
         // core data manipulations must be made in thread with context, so...
         [self.document.managedObjectContext performBlock:^{
-            for (NSArray *table in data) {
-                // start creating objects in document's context
+            for (id cur in currencies) {
+                [self.currency insertWithDict:cur];
             }
+            for (id cat in expenseCategories) {
+                [self.expenseCategory insertWithDict:cat];
+            }
+            for (id com in expenseComments) {
+                [self.expenseComment insertWithDict:com];
+            }
+            NSLog(@"comments are: %@", [self.expenseComment findAll]);
         }];
     });
     
@@ -71,8 +157,9 @@
         [self.document saveToURL:url forSaveOperation:UIDocumentSaveForCreating completionHandler:^(BOOL success) {
             if (success)
             {
-                [self documentIsReady];
                 // db don't exist, it's THE place to populate it with initial data
+                [self fetchInitialDataIntoDocument];
+                [self documentIsReady];
             } else
             {
                 NSLog(@"couldn't open document at %@", url);
@@ -90,7 +177,7 @@
     }
 }
 
-- (void)setdocument:(UIManagedDocument *)fDatabase {
+- (void)setDocument:(UIManagedDocument *)fDatabase {
     if (_document != fDatabase) {
         _document = fDatabase;
         [self useDocument];

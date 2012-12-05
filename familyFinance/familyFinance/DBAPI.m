@@ -27,6 +27,7 @@
     return self;
 }
 
+
 - (NSString *)getEntity
 {
     NSMutableString *class = [NSMutableString stringWithString:NSStringFromClass([self class])];
@@ -42,6 +43,7 @@
     }
 }
 
+
 - (NSArray *)findAll
 {
     NSString *entity = [self getEntity];
@@ -55,6 +57,7 @@
     return records;
 }
 
+
 - (NSArray *)findAllAndSortBy:(NSSortDescriptor *)sortDescriptor // nil for empty sort descriptor
 {
     NSString *entity = [self getEntity];
@@ -67,6 +70,29 @@
     NSArray *records = [self.context executeFetchRequest:request error:&error];
     
     return records;
+}
+
+
+- (void)insertWithDict:(NSDictionary *)dict inManagedObjectContext:(NSManagedObjectContext *)context
+{
+    NSString *entity = [self getEntity];
+    
+    id obj = [NSEntityDescription insertNewObjectForEntityForName:entity inManagedObjectContext:context];
+    for (NSString *key in dict) {
+        [obj setValue:[dict objectForKey:key] forKey:key];
+    }
+    
+    NSError *error = nil;
+    if (![context save:&error]) {
+        NSLog(@"Error while inserting new ExpenseComment: %@, %@", error, [error userInfo]);
+        abort();
+    }
+}
+
+
+- (void)insertWithDict:(NSDictionary *)dict
+{
+    [self insertWithDict:dict inManagedObjectContext:self.context];
 }
 
 @end

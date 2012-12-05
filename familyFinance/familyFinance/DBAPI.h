@@ -27,5 +27,7 @@
 - (id)initWithContext:(NSManagedObjectContext *)context;
 - (NSArray *)findAll;
 - (NSArray *)findAllAndSortBy:(NSSortDescriptor *)sortDescriptor;
+- (void)insertWithDict:(NSDictionary *)dict inManagedObjectContext:(NSManagedObjectContext *)context;
+- (void)insertWithDict:(NSDictionary *)dict;
 
 @end
