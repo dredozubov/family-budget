@@ -168,8 +168,9 @@
     } else if (self.document.documentState == UIDocumentStateClosed) {
         [self.document openWithCompletionHandler:^(BOOL success) {
             // error handling
-            [self documentIsNotReady];
-            NSLog(@"logging error: UIDocumentStateClosed");
+            [self documentIsReady];
+            NSLog(@"logging: UIDocumentStateClosed");
+            NSLog(@"opened after completionHandler: %d", self.document.documentState == UIDocumentStateNormal);
         }];
     } else if (self.document.documentState == UIDocumentStateNormal) {
         [self documentIsReady];
