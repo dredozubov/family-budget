@@ -14,8 +14,5 @@ extern NSString * const EXPENSE_COMMENT_CATEGORY;
 
 @interface ExpenseCommentAPI: DBAPI
 
-- (void)insertWithInfo:(NSDictionary *)expenseCommentInfo;
-- (void)insertWithInfo:(NSDictionary *)expenseCommentInfo inManagedObjectContext:context;
-
 @end
 

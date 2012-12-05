@@ -26,23 +26,4 @@ NSString * const CURRENCY_CODE = @"code";
     }
 }
 
-- (void)insertWithInfo:(NSDictionary *)currencyInfo
-{
-    [self insertWithInfo:currencyInfo inManagedObjectContext:self.context];
-}
-
-- (void)insertWithInfo:(NSDictionary *)currencyInfo inManagedObjectContext:(id)context
-{
-    Currency *currency = nil;
-    
-    currency = [NSEntityDescription insertNewObjectForEntityForName:@"Currency" inManagedObjectContext:self.context];
-    currency.code = [currencyInfo objectForKey:CURRENCY_CODE];
-    
-    NSError *error = nil;
-    if (![self.context save:&error]) {
-        NSLog(@"Error while inserting new Currency: %@, %@", error, [error userInfo]);
-        abort();
-    }
-}
-
 @end

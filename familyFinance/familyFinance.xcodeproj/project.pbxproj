@@ -130,8 +130,6 @@
 		21E047BF166699F2001B866A = {
 			isa = PBXGroup;
 			children = (
-				21F95B0E166BBA610045AE2E /* RootViewController.h */,
-				21F95B0F166BBA610045AE2E /* RootViewController.m */,
 				21E047D4166699F2001B866A /* familyFinance */,
 				21E047F8166699F2001B866A /* familyFinanceTests */,
 				21E047CD166699F2001B866A /* Frameworks */,
@@ -163,10 +161,10 @@
 		21E047D4166699F2001B866A /* familyFinance */ = {
 			isa = PBXGroup;
 			children = (
-				21F6FFC91668DA6B00C5C5AD /* views */,
 				21A541E51668B87B00B1F45E /* familyFinance.entitlements */,
 				21E047DD166699F2001B866A /* AppDelegate.h */,
 				21E047DE166699F2001B866A /* AppDelegate.m */,
+				21F6FFC91668DA6B00C5C5AD /* ViewControllers */,
 				21F95B1D166E0A1B0045AE2E /* storageAPI */,
 				21E04818166730DB001B866A /* storageModels */,
 				21E047D5166699F2001B866A /* Supporting Files */,
@@ -226,13 +224,15 @@
 			name = storageModels;
 			sourceTree = "<group>";
 		};
-		21F6FFC91668DA6B00C5C5AD /* views */ = {
+		21F6FFC91668DA6B00C5C5AD /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				21F95B0E166BBA610045AE2E /* RootViewController.h */,
+				21F95B0F166BBA610045AE2E /* RootViewController.m */,
 				21F6FFCA1668DAB400C5C5AD /* ExpenseViewController.h */,
 				21F6FFCB1668DAB400C5C5AD /* ExpenseViewController.m */,
 			);
-			name = views;
+			name = ViewControllers;
 			path = ..;
 			sourceTree = "<group>";
 		};

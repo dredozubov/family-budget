@@ -13,6 +13,4 @@ extern NSString * const EXPENSE_AMOUNT;
 
 @interface ExpenseAPI: DBAPI
 
-- (void)insertWithInfo:(NSDictionary *)expenseInfo;
-
 @end

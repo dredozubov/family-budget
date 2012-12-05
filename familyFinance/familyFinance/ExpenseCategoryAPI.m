@@ -27,17 +27,4 @@ NSString * const EXPENSE_CATEGORY_IMAGE_DATA = @"image";
     }
 }
 
-//- (NSArray *)findAll
-//{
-//    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"ExpenseCategory"];
-//    request.predicate = nil;
-//    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"rating" ascending:YES];
-//    request.sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
-//    
-//    NSError *error = nil;
-//    NSArray *records = [self.context executeFetchRequest:request error:&error];
-//    
-//    return records;
-//}
-
 @end

@@ -14,7 +14,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    DatabaseWriter *dbWriter = [[DatabaseWriter alloc] init];
+    //DatabaseWriter *dbWriter = [[DatabaseWriter alloc] init];
 //    [dbWriter.expenseCategory insertWithName:@"foo"];
 
 //    NSLog(@"-----------");

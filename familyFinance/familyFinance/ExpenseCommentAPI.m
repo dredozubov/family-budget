@@ -13,27 +13,4 @@ NSString * const EXPENSE_COMMENT_CATEGORY = @"category";
 
 @implementation ExpenseCommentAPI
 
-- (void)insertWithInfo:(NSDictionary *)expenseCommentInfo
-{
-    [self insertWithInfo:expenseCommentInfo inManagedObjectContext:self.context];
-}
-
-- (void)insertWithInfo:(NSDictionary *)expenseCommentInfo inManagedObjectContext:(NSManagedObjectContext *)context
-{
-    ExpenseComment *expenseComment = nil;
-    
-    expenseComment = [NSEntityDescription insertNewObjectForEntityForName:@"ExpenseComment" inManagedObjectContext:context];
-    for (NSString *key in expenseCommentInfo) {
-        [expenseComment setValue:[expenseCommentInfo objectForKey:key] forKey:key];
-    }
-    
-    NSError *error = nil;
-    if (![context save:&error]) {
-        NSLog(@"Error while inserting new ExpenseComment: %@, %@", error, [error userInfo]);
-        abort();
-    }
-
-}
-
-
 @end
