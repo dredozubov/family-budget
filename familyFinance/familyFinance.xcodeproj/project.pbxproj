@@ -30,13 +30,13 @@
 		21E04854166761E3001B866A /* ExpenseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E04853166761E3001B866A /* ExpenseAPI.m */; };
 		21F6FFBB1668C5EC00C5C5AD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F6FFBA1668C5EC00C5C5AD /* CoreData.framework */; };
 		21F6FFBF1668CBDB00C5C5AD /* CurrencyAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F6FFBE1668CBDB00C5C5AD /* CurrencyAPI.m */; };
-		21F6FFC41668D72100C5C5AD /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21F6FFC31668D72100C5C5AD /* Storyboard.storyboard */; };
 		21F6FFCC1668DAB400C5C5AD /* ExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F6FFCB1668DAB400C5C5AD /* ExpenseViewController.m */; };
 		21F95B10166BBA610045AE2E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F95B0F166BBA610045AE2E /* RootViewController.m */; };
 		21F95B13166DDDD80045AE2E /* ExpenseCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F95B12166DDDD80045AE2E /* ExpenseCategory.m */; };
 		21F95B16166DDDD90045AE2E /* ExpenseComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F95B15166DDDD90045AE2E /* ExpenseComment.m */; };
 		21F95B19166DDE8E0045AE2E /* Expense.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F95B18166DDE8E0045AE2E /* Expense.m */; };
 		21F95B1C166DE4500045AE2E /* DBAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F95B1B166DE4500045AE2E /* DBAPI.m */; };
+		2232BB7116735EC300FDE733 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2232BB7016735EC300FDE733 /* iPhone.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +86,6 @@
 		21F6FFBE1668CBDB00C5C5AD /* CurrencyAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CurrencyAPI.m; path = familyFinance/CurrencyAPI.m; sourceTree = "<group>"; };
 		21F6FFC11668CC3400C5C5AD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		21F6FFC21668CC3400C5C5AD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		21F6FFC31668D72100C5C5AD /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		21F6FFCA1668DAB400C5C5AD /* ExpenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseViewController.h; sourceTree = "<group>"; };
 		21F6FFCB1668DAB400C5C5AD /* ExpenseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseViewController.m; sourceTree = "<group>"; };
 		21F95B0E166BBA610045AE2E /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
@@ -99,6 +98,7 @@
 		21F95B18166DDE8E0045AE2E /* Expense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expense.m; sourceTree = "<group>"; };
 		21F95B1A166DE4500045AE2E /* DBAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBAPI.h; path = familyFinance/DBAPI.h; sourceTree = "<group>"; };
 		21F95B1B166DE4500045AE2E /* DBAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBAPI.m; path = familyFinance/DBAPI.m; sourceTree = "<group>"; };
+		2232BB7016735EC300FDE733 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPhone.storyboard; path = ../iPhone.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,7 +170,7 @@
 				21E047D5166699F2001B866A /* Supporting Files */,
 				21E0483D16675697001B866A /* DatabaseWriter.h */,
 				21E0483E16675697001B866A /* DatabaseWriter.m */,
-				21F6FFC31668D72100C5C5AD /* Storyboard.storyboard */,
+				2232BB7016735EC300FDE733 /* iPhone.storyboard */,
 			);
 			path = familyFinance;
 			sourceTree = "<group>";
@@ -331,7 +331,7 @@
 				21E047E1166699F2001B866A /* Default.png in Resources */,
 				21E047E3166699F2001B866A /* Default@2x.png in Resources */,
 				21E047E5166699F2001B866A /* Default-568h@2x.png in Resources */,
-				21F6FFC41668D72100C5C5AD /* Storyboard.storyboard in Resources */,
+				2232BB7116735EC300FDE733 /* iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
