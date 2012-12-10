@@ -10,6 +10,7 @@
 #import "CommentAPI.h"
 #import "CategoryAPI.h"
 #import "CurrencyAPI.h"
+#import "TransactionAPI.h"
 
 @interface DatabaseWriter : NSObject {
     UIManagedDocument *document;
@@ -17,19 +18,14 @@
 
 - (id)init;
 - (NSManagedObjectContext *)context;
-//- (id)getExpenseCommentByText:(NSString *)text;
-//- (id)getExpenseCategoryByName:(NSString *)name;
-//- (id)getCurrencyByCode:(NSString *)code;
-
-
 
 @property (nonatomic, retain) UIManagedDocument *document;
 
 @property (nonatomic) BOOL ready;
 
-//@property (nonatomic, retain) ExpenseAPI *expense;
-@property (nonatomic, retain) CommentAPI *expenseComment;
-@property (nonatomic, retain) CategoryAPI *expenseCategory;
+@property (nonatomic, retain) TransactionAPI *transaction;
+@property (nonatomic, retain) CommentAPI *comment;
+@property (nonatomic, retain) CategoryAPI *category;
 @property (nonatomic, retain) CurrencyAPI *currency;
 
 @end

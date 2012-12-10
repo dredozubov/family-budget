@@ -7,7 +7,7 @@
 //
 
 #import "coreDataInMemoryTests.h"
-#import "ExpenseCategoryAPI.h"
+#import "CategoryAPI.h"
 
 
 @implementation coreDataInMemoryTests
@@ -44,8 +44,8 @@
 
 - (void)testDBAPISubClassing
 {
-    ExpenseCategoryAPI *expenseCategory = [[ExpenseCategoryAPI alloc] initWithContext:context];
-    NSArray *results = [expenseCategory findAll];
+    CategoryAPI *category = [[CategoryAPI alloc] initWithContext:context];
+    NSArray *results = [category findAll];
     NSAssert1([results count] == 0, @"DBAPI Subclassing", nil);
     NSLog(@"Results: %@", results);
 }

@@ -10,6 +10,7 @@
 #import "CurrencyAPI.h"
 #import "CommentAPI.h"
 #import "CategoryAPI.h"
+#import "TransactionAPI.h"
 
 @implementation DatabaseWriter
  
@@ -23,9 +24,10 @@
         NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory: NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
         url = [url URLByAppendingPathComponent: @"FinanceDB"];
         self.document = [[UIManagedDocument alloc] initWithFileURL: url];
-        self.expenseCategory = [[CategoryAPI alloc] initWithContext:self.context];
-        self.expenseComment = [[CommentAPI alloc] initWithContext:self.context];
+        self.category = [[CategoryAPI alloc] initWithContext:self.context];
+        self.comment = [[CommentAPI alloc] initWithContext:self.context];
         self.currency = [[CurrencyAPI alloc] initWithContext:self.context];
+        self.transaction = [[TransactionAPI alloc] initWithContext:self.context];
     }
     return self;
 }
@@ -138,12 +140,12 @@
                 [self.currency insertWithDict:cur];
             }
             for (id cat in expenseCategories) {
-                [self.expenseCategory insertWithDict:cat];
+                [self.category insertWithDict:cat];
             }
             for (id com in expenseComments) {
-                [self.expenseComment insertWithDict:com];
+                [self.comment insertWithDict:com];
             }
-            NSLog(@"comments are: %@", [self.expenseComment findAll]);
+            NSLog(@"comments are: %@", [self.comment findAll]);
         }];
     });
     
