@@ -50,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		21433B85166F809800A3F098 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Macros.h; path = ../Macros.h; sourceTree = "<group>"; };
 		21A541E51668B87B00B1F45E /* familyFinance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = familyFinance.entitlements; sourceTree = "<group>"; };
 		21A541E71668BC8000B1F45E /* ExpenseCategoryAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpenseCategoryAPI.h; path = familyFinance/ExpenseCategoryAPI.h; sourceTree = "<group>"; };
 		21A541E81668BC8000B1F45E /* ExpenseCategoryAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpenseCategoryAPI.m; path = familyFinance/ExpenseCategoryAPI.m; sourceTree = "<group>"; };
@@ -161,6 +162,7 @@
 		21E047D4166699F2001B866A /* familyFinance */ = {
 			isa = PBXGroup;
 			children = (
+				21433B85166F809800A3F098 /* Macros.h */,
 				21A541E51668B87B00B1F45E /* familyFinance.entitlements */,
 				21E047DD166699F2001B866A /* AppDelegate.h */,
 				21E047DE166699F2001B866A /* AppDelegate.m */,
