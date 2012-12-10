@@ -6,13 +6,13 @@
 //  Copyright (c) 2012 Denis Redozubov. All rights reserved.
 //
 
-#import "ExpenseComment.h"
+#import "Comment.h"
 #import "DBAPI.h"
 
 extern NSString * const EXPENSE_COMMENT_TEXT;
 extern NSString * const EXPENSE_COMMENT_CATEGORY;
 
-@interface ExpenseCommentAPI: DBAPI
+@interface CommentAPI: DBAPI
 
 @end
 

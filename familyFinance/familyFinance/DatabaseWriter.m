@@ -8,8 +8,8 @@
 
 #import "DatabaseWriter.h"
 #import "CurrencyAPI.h"
-#import "ExpenseCommentAPI.h"
-#import "ExpenseCategoryAPI.h"
+#import "CommentAPI.h"
+#import "CategoryAPI.h"
 
 @implementation DatabaseWriter
  
@@ -23,8 +23,8 @@
         NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory: NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
         url = [url URLByAppendingPathComponent: @"FinanceDB"];
         self.document = [[UIManagedDocument alloc] initWithFileURL: url];
-        self.expenseCategory = [[ExpenseCategoryAPI alloc] initWithContext:self.context];
-        self.expenseComment = [[ExpenseCommentAPI alloc] initWithContext:self.context];
+        self.expenseCategory = [[CategoryAPI alloc] initWithContext:self.context];
+        self.expenseComment = [[CommentAPI alloc] initWithContext:self.context];
         self.currency = [[CurrencyAPI alloc] initWithContext:self.context];
     }
     return self;
@@ -77,12 +77,12 @@
         
         // relations
         // TODO: doesn't work, change to fetched NSManagedObjects
-        ExpenseCategory *foodCategory =
+        Category *foodCategory =
             [NSEntityDescription insertNewObjectForEntityForName:@"ExpenseCategory" inManagedObjectContext:self.context];
         foodCategory.name = @"food";
         foodCategory.rating = 0;
         
-        ExpenseCategory *personalCategory =
+        Category *personalCategory =
         [NSEntityDescription insertNewObjectForEntityForName:@"ExpenseCategory" inManagedObjectContext:self.context];
         foodCategory.name = @"personal use";
         foodCategory.rating = 0;
@@ -118,7 +118,7 @@
 
                                     nil];
         
-//        NSArray *expenses = [NSArray arrayWithObjects:
+//        NSArray *transactions = [NSArray arrayWithObjects:
 //                             [NSDictionary dictionaryWithObjectsAndKeys:
 //                              [NSNumber numberWithDouble:5.0], @"amount",
 //                              [NSDate date], @"added_on",
