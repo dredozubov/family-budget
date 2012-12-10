@@ -172,7 +172,7 @@
 				21E047D5166699F2001B866A /* Supporting Files */,
 				21E0483D16675697001B866A /* DatabaseWriter.h */,
 				21E0483E16675697001B866A /* DatabaseWriter.m */,
-				2232BB7016735EC300FDE733 /* iPhone.storyboard */,
+				21F6FFC31668D72100C5C5AD /* Storyboard.storyboard */,
 			);
 			path = familyFinance;
 			sourceTree = "<group>";
@@ -333,7 +333,7 @@
 				21E047E1166699F2001B866A /* Default.png in Resources */,
 				21E047E3166699F2001B866A /* Default@2x.png in Resources */,
 				21E047E5166699F2001B866A /* Default-568h@2x.png in Resources */,
-				2232BB7116735EC300FDE733 /* iPhone.storyboard in Resources */,
+				21F6FFC41668D72100C5C5AD /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
