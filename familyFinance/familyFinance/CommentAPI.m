@@ -6,11 +6,11 @@
 //  Copyright (c) 2012 Denis Redozubov. All rights reserved.
 //
 
-#import "ExpenseCommentAPI.h"
+#import "CommentAPI.h"
 
 NSString * const EXPENSE_COMMENT_TEXT = @"text";
 NSString * const EXPENSE_COMMENT_CATEGORY = @"category";
 
-@implementation ExpenseCommentAPI
+@implementation CommentAPI
 
 @end

@@ -1,19 +1,21 @@
 //
-//  Currency.m
+//  Comment.m
 //  familyFinance
 //
 //  Created by Denis Redozubov on 10.12.12.
 //  Copyright (c) 2012 Denis Redozubov. All rights reserved.
 //
 
-#import "Currency.h"
+#import "Comment.h"
+#import "Category.h"
 #import "Transaction.h"
 
 
-@implementation Currency
+@implementation Comment
 
-@dynamic code;
-@dynamic dollar_relation;
+@dynamic rating;
+@dynamic text;
+@dynamic category;
 @dynamic ledger;
 
 @end

@@ -6,13 +6,13 @@
 //  Copyright (c) 2012 Denis Redozubov. All rights reserved.
 //
 
-#import "ExpenseCategory.h"
+#import "Category.h"
 #import "DBAPI.h"
 
 extern NSString * const EXPENSE_CATEGORY_NAME;
 extern NSString * const EXPENSE_CATEGORY_IMAGE_DATA;
 
-@interface ExpenseCategoryAPI: DBAPI
+@interface CategoryAPI: DBAPI
 
 - (void)insertWithName:(NSString *)name;
 
