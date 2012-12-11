@@ -13,6 +13,16 @@
 		2101067E16761BAA00ACA12B /* TransactionAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101067D16761BAA00ACA12B /* TransactionAPI.m */; };
 		2101068116761BF500ACA12B /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101068016761BF500ACA12B /* Transaction.m */; };
 		214B258B166E311300B7AB5B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F6FFBA1668C5EC00C5C5AD /* CoreData.framework */; };
+		215E4020167742B000757B69 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E047CE166699F2001B866A /* UIKit.framework */; };
+		215E4021167742B000757B69 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E047D0166699F2001B866A /* Foundation.framework */; };
+		215E4022167742B000757B69 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E047D2166699F2001B866A /* CoreGraphics.framework */; };
+		215E4028167742B100757B69 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 215E4026167742B000757B69 /* InfoPlist.strings */; };
+		215E402A167742B100757B69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 215E4029167742B100757B69 /* main.m */; };
+		215E4030167742B100757B69 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 215E402F167742B100757B69 /* Default.png */; };
+		215E4032167742B100757B69 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 215E4031167742B100757B69 /* Default@2x.png */; };
+		215E4034167742B100757B69 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 215E4033167742B100757B69 /* Default-568h@2x.png */; };
+		215E403A1677430700757B69 /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 215E40391677430700757B69 /* GHUnitIOS.framework */; };
+		215E403C167743CF00757B69 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 215E403B167743CF00757B69 /* QuartzCore.framework */; };
 		21A541E91668BC8000B1F45E /* CategoryAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A541E81668BC8000B1F45E /* CategoryAPI.m */; };
 		21A541EF1668C07500B1F45E /* CommentAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A541EE1668C07500B1F45E /* CommentAPI.m */; };
 		21E047CF166699F2001B866A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E047CE166699F2001B866A /* UIKit.framework */; };
@@ -36,7 +46,6 @@
 		21F6FFCC1668DAB400C5C5AD /* ExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F6FFCB1668DAB400C5C5AD /* ExpenseViewController.m */; };
 		21F95B10166BBA610045AE2E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F95B0F166BBA610045AE2E /* RootViewController.m */; };
 		21F95B1C166DE4500045AE2E /* DBAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F95B1B166DE4500045AE2E /* DBAPI.m */; };
-		2232BB7116735EC300FDE733 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2232BB7016735EC300FDE733 /* iPhone.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +59,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		21433B85166F809800A3F098 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Macros.h; path = ../Macros.h; sourceTree = "<group>"; };
 		210106701676187A00ACA12B /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
 		210106711676187A00ACA12B /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 		210106731676187A00ACA12B /* Currency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Currency.h; sourceTree = "<group>"; };
@@ -61,6 +69,17 @@
 		2101067D16761BAA00ACA12B /* TransactionAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionAPI.m; sourceTree = "<group>"; };
 		2101067F16761BF500ACA12B /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
 		2101068016761BF500ACA12B /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
+		21433B85166F809800A3F098 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Macros.h; path = ../Macros.h; sourceTree = "<group>"; };
+		215E401E167742B000757B69 /* GHTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		215E4025167742B000757B69 /* GHTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GHTests-Info.plist"; sourceTree = "<group>"; };
+		215E4027167742B100757B69 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		215E4029167742B100757B69 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		215E402B167742B100757B69 /* GHTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GHTests-Prefix.pch"; sourceTree = "<group>"; };
+		215E402F167742B100757B69 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		215E4031167742B100757B69 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		215E4033167742B100757B69 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		215E40391677430700757B69 /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnitIOS.framework; path = "../External/gh-unit/Project-iOS/build/Framework/GHUnitIOS.framework"; sourceTree = "<group>"; };
+		215E403B167743CF00757B69 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		21A541E51668B87B00B1F45E /* familyFinance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = familyFinance.entitlements; sourceTree = "<group>"; };
 		21A541E71668BC8000B1F45E /* CategoryAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryAPI.h; path = familyFinance/CategoryAPI.h; sourceTree = "<group>"; };
 		21A541E81668BC8000B1F45E /* CategoryAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryAPI.m; path = familyFinance/CategoryAPI.m; sourceTree = "<group>"; };
@@ -99,10 +118,21 @@
 		21F95B0F166BBA610045AE2E /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		21F95B1A166DE4500045AE2E /* DBAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBAPI.h; path = familyFinance/DBAPI.h; sourceTree = "<group>"; };
 		21F95B1B166DE4500045AE2E /* DBAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBAPI.m; path = familyFinance/DBAPI.m; sourceTree = "<group>"; };
-		2232BB7016735EC300FDE733 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPhone.storyboard; path = ../iPhone.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		215E401B167742B000757B69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				215E4020167742B000757B69 /* UIKit.framework in Frameworks */,
+				215E4021167742B000757B69 /* Foundation.framework in Frameworks */,
+				215E4022167742B000757B69 /* CoreGraphics.framework in Frameworks */,
+				215E403C167743CF00757B69 /* QuartzCore.framework in Frameworks */,
+				215E403A1677430700757B69 /* GHUnitIOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21E047C7166699F2001B866A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -128,11 +158,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		215E4023167742B000757B69 /* GHTests */ = {
+			isa = PBXGroup;
+			children = (
+				215E4024167742B000757B69 /* Supporting Files */,
+			);
+			path = GHTests;
+			sourceTree = "<group>";
+		};
+		215E4024167742B000757B69 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				215E4025167742B000757B69 /* GHTests-Info.plist */,
+				215E4026167742B000757B69 /* InfoPlist.strings */,
+				215E4029167742B100757B69 /* main.m */,
+				215E402B167742B100757B69 /* GHTests-Prefix.pch */,
+				215E402F167742B100757B69 /* Default.png */,
+				215E4031167742B100757B69 /* Default@2x.png */,
+				215E4033167742B100757B69 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		21E047BF166699F2001B866A = {
 			isa = PBXGroup;
 			children = (
 				21E047D4166699F2001B866A /* familyFinance */,
 				21E047F8166699F2001B866A /* familyFinanceTests */,
+				215E4023167742B000757B69 /* GHTests */,
 				21E047CD166699F2001B866A /* Frameworks */,
 				21E047CB166699F2001B866A /* Products */,
 			);
@@ -143,6 +196,7 @@
 			children = (
 				21E047CA166699F2001B866A /* familyFinance.app */,
 				21E047F1166699F2001B866A /* familyFinanceTests.octest */,
+				215E401E167742B000757B69 /* GHTests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,6 +204,8 @@
 		21E047CD166699F2001B866A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				215E403B167743CF00757B69 /* QuartzCore.framework */,
+				215E40391677430700757B69 /* GHUnitIOS.framework */,
 				21F6FFBA1668C5EC00C5C5AD /* CoreData.framework */,
 				21E047CE166699F2001B866A /* UIKit.framework */,
 				21E047D0166699F2001B866A /* Foundation.framework */,
@@ -172,7 +228,6 @@
 				21E047D5166699F2001B866A /* Supporting Files */,
 				21E0483D16675697001B866A /* DatabaseWriter.h */,
 				21E0483E16675697001B866A /* DatabaseWriter.m */,
-				21F6FFC31668D72100C5C5AD /* Storyboard.storyboard */,
 			);
 			path = familyFinance;
 			sourceTree = "<group>";
@@ -259,6 +314,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		215E401D167742B000757B69 /* GHTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 215E4037167742B100757B69 /* Build configuration list for PBXNativeTarget "GHTests" */;
+			buildPhases = (
+				215E401A167742B000757B69 /* Sources */,
+				215E401B167742B000757B69 /* Frameworks */,
+				215E401C167742B000757B69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GHTests;
+			productName = GHTests;
+			productReference = 215E401E167742B000757B69 /* GHTests.app */;
+			productType = "com.apple.product-type.application";
+		};
 		21E047C9166699F2001B866A /* familyFinance */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21E04803166699F2001B866A /* Build configuration list for PBXNativeTarget "familyFinance" */;
@@ -320,11 +392,23 @@
 			targets = (
 				21E047C9166699F2001B866A /* familyFinance */,
 				21E047F0166699F2001B866A /* familyFinanceTests */,
+				215E401D167742B000757B69 /* GHTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		215E401C167742B000757B69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				215E4028167742B100757B69 /* InfoPlist.strings in Resources */,
+				215E4030167742B100757B69 /* Default.png in Resources */,
+				215E4032167742B100757B69 /* Default@2x.png in Resources */,
+				215E4034167742B100757B69 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21E047C8166699F2001B866A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -333,7 +417,6 @@
 				21E047E1166699F2001B866A /* Default.png in Resources */,
 				21E047E3166699F2001B866A /* Default@2x.png in Resources */,
 				21E047E5166699F2001B866A /* Default-568h@2x.png in Resources */,
-				21F6FFC41668D72100C5C5AD /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +447,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		215E401A167742B000757B69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				215E402A167742B100757B69 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21E047C6166699F2001B866A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -405,6 +496,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		215E4026167742B000757B69 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				215E4027167742B100757B69 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		21E047D7166699F2001B866A /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -426,6 +525,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		215E4035167742B100757B69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../External/gh-unit/Project-iOS/build/Framework\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GHTests/GHTests-Prefix.pch";
+				INFOPLIST_FILE = "GHTests/GHTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		215E4036167742B100757B69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../External/gh-unit/Project-iOS/build/Framework\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GHTests/GHTests-Prefix.pch";
+				INFOPLIST_FILE = "GHTests/GHTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		21E04801166699F2001B866A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -541,6 +680,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		215E4037167742B100757B69 /* Build configuration list for PBXNativeTarget "GHTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				215E4035167742B100757B69 /* Debug */,
+				215E4036167742B100757B69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		21E047C4166699F2001B866A /* Build configuration list for PBXProject "familyFinance" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
