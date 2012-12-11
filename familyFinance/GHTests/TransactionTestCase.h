@@ -7,7 +7,10 @@
 //
 
 #import <GHUnitIOS/GHUnit.h>
+#import "DatabaseWriter.h"
 
 @interface TransactionTestCase : GHTestCase
+
+@property (nonatomic, retain) NSManagedObjectContext *context;
 
 @end

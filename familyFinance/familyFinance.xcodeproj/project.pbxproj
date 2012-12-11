@@ -26,6 +26,12 @@
 		215E404116774A5400757B69 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 215E404016774A5400757B69 /* libOCMock.a */; };
 		215E40451677502400757B69 /* TransactionTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 215E40441677502400757B69 /* TransactionTestCase.m */; };
 		215E4046167750DD00757B69 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F6FFBA1668C5EC00C5C5AD /* CoreData.framework */; };
+		215E40711677887900757B69 /* CurrencyAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F6FFBE1668CBDB00C5C5AD /* CurrencyAPI.m */; };
+		215E40721677889300757B69 /* DBAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F95B1B166DE4500045AE2E /* DBAPI.m */; };
+		215E40731677889D00757B69 /* CategoryAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A541E81668BC8000B1F45E /* CategoryAPI.m */; };
+		215E4074167788B800757B69 /* TransactionAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101067D16761BAA00ACA12B /* TransactionAPI.m */; };
+		215E4075167788C000757B69 /* CommentAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A541EE1668C07500B1F45E /* CommentAPI.m */; };
+		215E408A1677AC3100757B69 /* FinanceModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21E0480916672F53001B866A /* FinanceModel.xcdatamodeld */; };
 		21A541E91668BC8000B1F45E /* CategoryAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A541E81668BC8000B1F45E /* CategoryAPI.m */; };
 		21A541EF1668C07500B1F45E /* CommentAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A541EE1668C07500B1F45E /* CommentAPI.m */; };
 		21E047CF166699F2001B866A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E047CE166699F2001B866A /* UIKit.framework */; };
@@ -317,12 +323,12 @@
 			children = (
 				21A541ED1668C07400B1F45E /* CommentAPI.h */,
 				21A541EE1668C07500B1F45E /* CommentAPI.m */,
+				21A541E71668BC8000B1F45E /* CategoryAPI.h */,
+				21A541E81668BC8000B1F45E /* CategoryAPI.m */,
 				21F6FFBD1668CBDB00C5C5AD /* CurrencyAPI.h */,
 				21F6FFBE1668CBDB00C5C5AD /* CurrencyAPI.m */,
-				21A541E71668BC8000B1F45E /* CategoryAPI.h */,
 				2101067C16761BAA00ACA12B /* TransactionAPI.h */,
 				2101067D16761BAA00ACA12B /* TransactionAPI.m */,
-				21A541E81668BC8000B1F45E /* CategoryAPI.m */,
 				21F95B1A166DE4500045AE2E /* DBAPI.h */,
 				21F95B1B166DE4500045AE2E /* DBAPI.m */,
 			);
@@ -472,6 +478,12 @@
 			files = (
 				215E402A167742B100757B69 /* main.m in Sources */,
 				215E40451677502400757B69 /* TransactionTestCase.m in Sources */,
+				215E40711677887900757B69 /* CurrencyAPI.m in Sources */,
+				215E40721677889300757B69 /* DBAPI.m in Sources */,
+				215E40731677889D00757B69 /* CategoryAPI.m in Sources */,
+				215E4074167788B800757B69 /* TransactionAPI.m in Sources */,
+				215E4075167788C000757B69 /* CommentAPI.m in Sources */,
+				215E408A1677AC3100757B69 /* FinanceModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +564,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../External/gh-unit/Project-iOS/build/Framework\"",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GHTests/GHTests-Prefix.pch";
@@ -579,6 +592,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../External/gh-unit/Project-iOS/build/Framework\"",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GHTests/GHTests-Prefix.pch";
@@ -721,6 +735,7 @@
 				215E4036167742B100757B69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		21E047C4166699F2001B866A /* Build configuration list for PBXProject "familyFinance" */ = {
 			isa = XCConfigurationList;

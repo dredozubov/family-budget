@@ -5,32 +5,32 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rating" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="comment" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Comment" inverseName="category" inverseEntity="Comment" syncable="YES"/>
-        <relationship name="ledger" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="category" inverseEntity="Transaction" syncable="YES"/>
+        <relationship name="transaction" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="category" inverseEntity="Transaction" syncable="YES"/>
     </entity>
     <entity name="Comment" representedClassName="Comment" syncable="YES">
         <attribute name="rating" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="category" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Category" inverseName="comment" inverseEntity="Category" syncable="YES"/>
-        <relationship name="ledger" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="comment" inverseEntity="Transaction" syncable="YES"/>
+        <relationship name="transaction" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="comment" inverseEntity="Transaction" syncable="YES"/>
     </entity>
     <entity name="Currency" representedClassName="Currency" syncable="YES">
         <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="dollar_relation" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="ledger" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="currency" inverseEntity="Transaction" syncable="YES"/>
+        <attribute name="dollar_relation" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="transaction" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="currency" inverseEntity="Transaction" syncable="YES"/>
     </entity>
     <entity name="Transaction" representedClassName="Transaction" syncable="YES">
         <attribute name="added_on" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="amount" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <relationship name="category" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="ledger" inverseEntity="Category" syncable="YES"/>
-        <relationship name="comment" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Comment" inverseName="ledger" inverseEntity="Comment" syncable="YES"/>
-        <relationship name="currency" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Currency" inverseName="ledger" inverseEntity="Currency" syncable="YES"/>
+        <relationship name="category" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="transaction" inverseEntity="Category" syncable="YES"/>
+        <relationship name="comment" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Comment" inverseName="transaction" inverseEntity="Comment" syncable="YES"/>
+        <relationship name="currency" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Currency" inverseName="transaction" inverseEntity="Currency" syncable="YES"/>
     </entity>
     <elements>
         <element name="Account" positionX="-7616" positionY="-5040" width="128" height="43"/>
-        <element name="Category" positionX="-7634" positionY="-4797" width="128" height="103"/>
-        <element name="Comment" positionX="-7920" positionY="-5080" width="128" height="103"/>
-        <element name="Currency" positionX="-7947" positionY="-4561" width="128" height="88"/>
+        <element name="Category" positionX="-7634" positionY="-4797" width="128" height="105"/>
+        <element name="Comment" positionX="-7920" positionY="-5080" width="128" height="105"/>
+        <element name="Currency" positionX="-7947" positionY="-4561" width="128" height="90"/>
         <element name="Transaction" positionX="-8003" positionY="-4858" width="128" height="133"/>
     </elements>
 </model>
