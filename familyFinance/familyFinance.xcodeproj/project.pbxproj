@@ -23,6 +23,7 @@
 		215E4034167742B100757B69 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 215E4033167742B100757B69 /* Default-568h@2x.png */; };
 		215E403A1677430700757B69 /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 215E40391677430700757B69 /* GHUnitIOS.framework */; };
 		215E403C167743CF00757B69 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 215E403B167743CF00757B69 /* QuartzCore.framework */; };
+		215E404116774A5400757B69 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 215E404016774A5400757B69 /* libOCMock.a */; };
 		21A541E91668BC8000B1F45E /* CategoryAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A541E81668BC8000B1F45E /* CategoryAPI.m */; };
 		21A541EF1668C07500B1F45E /* CommentAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A541EE1668C07500B1F45E /* CommentAPI.m */; };
 		21E047CF166699F2001B866A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E047CE166699F2001B866A /* UIKit.framework */; };
@@ -80,6 +81,7 @@
 		215E4033167742B100757B69 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		215E40391677430700757B69 /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnitIOS.framework; path = "../External/gh-unit/Project-iOS/build/Framework/GHUnitIOS.framework"; sourceTree = "<group>"; };
 		215E403B167743CF00757B69 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		215E404016774A5400757B69 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
 		21A541E51668B87B00B1F45E /* familyFinance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = familyFinance.entitlements; sourceTree = "<group>"; };
 		21A541E71668BC8000B1F45E /* CategoryAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryAPI.h; path = familyFinance/CategoryAPI.h; sourceTree = "<group>"; };
 		21A541E81668BC8000B1F45E /* CategoryAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryAPI.m; path = familyFinance/CategoryAPI.m; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				215E4022167742B000757B69 /* CoreGraphics.framework in Frameworks */,
 				215E403C167743CF00757B69 /* QuartzCore.framework in Frameworks */,
 				215E403A1677430700757B69 /* GHUnitIOS.framework in Frameworks */,
+				215E404116774A5400757B69 /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,14 +183,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		215E404216774B5D00757B69 /* static_lib */ = {
+			isa = PBXGroup;
+			children = (
+				215E404016774A5400757B69 /* libOCMock.a */,
+			);
+			name = static_lib;
+			sourceTree = "<group>";
+		};
 		21E047BF166699F2001B866A = {
 			isa = PBXGroup;
 			children = (
 				21E047D4166699F2001B866A /* familyFinance */,
+				21E047CB166699F2001B866A /* Products */,
 				21E047F8166699F2001B866A /* familyFinanceTests */,
 				215E4023167742B000757B69 /* GHTests */,
 				21E047CD166699F2001B866A /* Frameworks */,
-				21E047CB166699F2001B866A /* Products */,
+				215E404216774B5D00757B69 /* static_lib */,
 			);
 			sourceTree = "<group>";
 		};
@@ -535,10 +547,17 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GHTests/GHTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/usr/include\"";
 				INFOPLIST_FILE = "GHTests/GHTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
+					"-force_load",
+					"\"$(SRCROOT)/libOCMock.a\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -555,10 +574,17 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GHTests/GHTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "GHTests/GHTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
+					"-force_load",
+					"\"$(SRCROOT)/libOCMock.a\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

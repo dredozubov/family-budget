@@ -1,3 +1,6 @@
 [submodule "External/gh-unit"]
 	path = External/gh-unit
 	url = git://github.com/gabriel/gh-unit.git
+[submodule "External/ocmock"]
+	path = External/ocmock
+	url = git://github.com/erikdoe/ocmock.git
