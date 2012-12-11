@@ -24,6 +24,8 @@
 		215E403A1677430700757B69 /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 215E40391677430700757B69 /* GHUnitIOS.framework */; };
 		215E403C167743CF00757B69 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 215E403B167743CF00757B69 /* QuartzCore.framework */; };
 		215E404116774A5400757B69 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 215E404016774A5400757B69 /* libOCMock.a */; };
+		215E40451677502400757B69 /* TransactionTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 215E40441677502400757B69 /* TransactionTestCase.m */; };
+		215E4046167750DD00757B69 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F6FFBA1668C5EC00C5C5AD /* CoreData.framework */; };
 		21A541E91668BC8000B1F45E /* CategoryAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A541E81668BC8000B1F45E /* CategoryAPI.m */; };
 		21A541EF1668C07500B1F45E /* CommentAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A541EE1668C07500B1F45E /* CommentAPI.m */; };
 		21E047CF166699F2001B866A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E047CE166699F2001B866A /* UIKit.framework */; };
@@ -82,6 +84,8 @@
 		215E40391677430700757B69 /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnitIOS.framework; path = "../External/gh-unit/Project-iOS/build/Framework/GHUnitIOS.framework"; sourceTree = "<group>"; };
 		215E403B167743CF00757B69 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		215E404016774A5400757B69 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
+		215E40431677502400757B69 /* TransactionTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionTestCase.h; sourceTree = "<group>"; };
+		215E40441677502400757B69 /* TransactionTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionTestCase.m; sourceTree = "<group>"; };
 		21A541E51668B87B00B1F45E /* familyFinance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = familyFinance.entitlements; sourceTree = "<group>"; };
 		21A541E71668BC8000B1F45E /* CategoryAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryAPI.h; path = familyFinance/CategoryAPI.h; sourceTree = "<group>"; };
 		21A541E81668BC8000B1F45E /* CategoryAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryAPI.m; path = familyFinance/CategoryAPI.m; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				215E4046167750DD00757B69 /* CoreData.framework in Frameworks */,
 				215E4020167742B000757B69 /* UIKit.framework in Frameworks */,
 				215E4021167742B000757B69 /* Foundation.framework in Frameworks */,
 				215E4022167742B000757B69 /* CoreGraphics.framework in Frameworks */,
@@ -165,6 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				215E4024167742B000757B69 /* Supporting Files */,
+				215E40431677502400757B69 /* TransactionTestCase.h */,
+				215E40441677502400757B69 /* TransactionTestCase.m */,
 			);
 			path = GHTests;
 			sourceTree = "<group>";
@@ -464,6 +471,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				215E402A167742B100757B69 /* main.m in Sources */,
+				215E40451677502400757B69 /* TransactionTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
