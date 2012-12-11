@@ -1,5 +1,5 @@
 //
-//  ExpenseWriter.m
+//  DatabaseWriter.m
 //  familyFinance
 //
 //  Created by Denis Redozubov on 29.11.12.
@@ -65,7 +65,7 @@
                                 @"USD", @"code",nil],
                                nil];
         
-        NSArray *expenseCategories = [NSArray arrayWithObjects:
+        NSArray *Categories = [NSArray arrayWithObjects:
                                       [NSDictionary dictionaryWithObjectsAndKeys:
                                        @"food", @"name",
                                        0, @"rating", nil],
@@ -80,28 +80,28 @@
         // relations
         // TODO: doesn't work, change to fetched NSManagedObjects
         Category *foodCategory =
-            [NSEntityDescription insertNewObjectForEntityForName:@"ExpenseCategory" inManagedObjectContext:self.context];
+            [NSEntityDescription insertNewObjectForEntityForName:@"Category" inManagedObjectContext:self.context];
         foodCategory.name = @"food";
         foodCategory.rating = 0;
         
         Category *personalCategory =
-        [NSEntityDescription insertNewObjectForEntityForName:@"ExpenseCategory" inManagedObjectContext:self.context];
-        foodCategory.name = @"personal use";
-        foodCategory.rating = 0;
+        [NSEntityDescription insertNewObjectForEntityForName:@"Category" inManagedObjectContext:self.context];
+        personalCategory.name = @"personal use";
+        personalCategory.rating = 0;
         
         Currency *usdCurrency =
             [NSEntityDescription insertNewObjectForEntityForName:@"Currency" inManagedObjectContext:self.context];
         usdCurrency.code = @"USD";
         
-//        ExpenseComment *familyfinanceComment =
-//            [NSEntityDescription insertNewObjectForEntityForName:@"ExpenseComment" inManagedObjectContext:self.context];
+//        Comment *familyfinanceComment =
+//            [NSEntityDescription insertNewObjectForEntityForName:@"Comment" inManagedObjectContext:self.context];
 //        familyfinanceComment.text = @"this very software!";
 //        familyfinanceComment.rating = 0;
 //        familyfinanceComment.category = personalCategory;
 
         // end
 
-        NSArray *expenseComments = [NSArray arrayWithObjects:
+        NSArray *Comments = [NSArray arrayWithObjects:
                                     [NSDictionary dictionaryWithObjectsAndKeys:
                                      @"coffeeshop", @"text",
                                      0, @"rating",
@@ -131,7 +131,7 @@
 //                             nil];
         
 //        NSArray *data = [NSArray arrayWithObjects:
-//                         currencies, expenseCategories, expenseComments,
+//                         currencies, Categories, Comments,
 //                         nil];
         
         // core data manipulations must be made in thread with context, so...
@@ -139,10 +139,10 @@
             for (id cur in currencies) {
                 [self.currency insertWithDict:cur];
             }
-            for (id cat in expenseCategories) {
+            for (id cat in Categories) {
                 [self.category insertWithDict:cat];
             }
-            for (id com in expenseComments) {
+            for (id com in Comments) {
                 [self.comment insertWithDict:com];
             }
             NSLog(@"comments are: %@", [self.comment findAll]);
