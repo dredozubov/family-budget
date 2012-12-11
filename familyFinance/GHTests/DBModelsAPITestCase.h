@@ -1,5 +1,5 @@
 //
-//  TransactionTestCase.h
+//  DBModelsAPITestCase.h
 //  familyFinance
 //
 //  Created by Denis Redozubov on 11.12.12.
@@ -7,9 +7,8 @@
 //
 
 #import <GHUnitIOS/GHUnit.h>
-#import "DatabaseWriter.h"
 
-@interface TransactionTestCase : GHTestCase
+@interface DBModelsAPITestCase : GHTestCase
 
 @property (nonatomic, retain) NSManagedObjectContext *context;
 

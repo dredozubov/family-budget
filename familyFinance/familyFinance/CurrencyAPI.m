@@ -26,4 +26,27 @@ NSString * const CURRENCY_CODE = @"code";
     }
 }
 
+- (Currency *)findByCode:(NSString *)code
+{
+    NSEntityDescription *entityDescription = [NSEntityDescription
+                                              entityForName:@"Currency" inManagedObjectContext:self.context];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDescription];
+    NSPredicate *foodPredicate = [NSPredicate predicateWithFormat:@"(code ==[c] %@)", code];
+    [request setEntity:entityDescription];
+    [request setPredicate:foodPredicate];
+    
+    NSError *error = nil;
+    NSArray *array = [self.context executeFetchRequest:request error:&error];
+    if (error) {
+        NSLog(@"unable to findByCode with code = %@:%@", code, error);
+        abort();
+    }
+    if ([array count] > 1) {
+        NSLog(@"duplicated values in findByCode with text = %@", code);
+        abort();
+    }
+    return [array objectAtIndex:0];
+}
+
 @end

@@ -15,5 +15,6 @@ extern NSString * const EXPENSE_CATEGORY_IMAGE_DATA;
 @interface CategoryAPI: DBAPI
 
 - (void)insertWithName:(NSString *)name;
+- (Category *)findByName:(NSString *)name;
 
 @end

@@ -12,7 +12,6 @@
 		2101067B1676187A00ACA12B /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101067A1676187A00ACA12B /* Category.m */; };
 		2101067E16761BAA00ACA12B /* TransactionAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101067D16761BAA00ACA12B /* TransactionAPI.m */; };
 		2101068116761BF500ACA12B /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2101068016761BF500ACA12B /* Transaction.m */; };
-		214B258B166E311300B7AB5B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F6FFBA1668C5EC00C5C5AD /* CoreData.framework */; };
 		215E4020167742B000757B69 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E047CE166699F2001B866A /* UIKit.framework */; };
 		215E4021167742B000757B69 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E047D0166699F2001B866A /* Foundation.framework */; };
 		215E4022167742B000757B69 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E047D2166699F2001B866A /* CoreGraphics.framework */; };
@@ -24,7 +23,7 @@
 		215E403A1677430700757B69 /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 215E40391677430700757B69 /* GHUnitIOS.framework */; };
 		215E403C167743CF00757B69 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 215E403B167743CF00757B69 /* QuartzCore.framework */; };
 		215E404116774A5400757B69 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 215E404016774A5400757B69 /* libOCMock.a */; };
-		215E40451677502400757B69 /* TransactionTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 215E40441677502400757B69 /* TransactionTestCase.m */; };
+		215E40451677502400757B69 /* DBModelsAPITestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 215E40441677502400757B69 /* DBModelsAPITestCase.m */; };
 		215E4046167750DD00757B69 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F6FFBA1668C5EC00C5C5AD /* CoreData.framework */; };
 		215E40711677887900757B69 /* CurrencyAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F6FFBE1668CBDB00C5C5AD /* CurrencyAPI.m */; };
 		215E40721677889300757B69 /* DBAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F95B1B166DE4500045AE2E /* DBAPI.m */; };
@@ -43,11 +42,6 @@
 		21E047E1166699F2001B866A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 21E047E0166699F2001B866A /* Default.png */; };
 		21E047E3166699F2001B866A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21E047E2166699F2001B866A /* Default@2x.png */; };
 		21E047E5166699F2001B866A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21E047E4166699F2001B866A /* Default-568h@2x.png */; };
-		21E047F3166699F2001B866A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E047F2166699F2001B866A /* SenTestingKit.framework */; };
-		21E047F4166699F2001B866A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E047CE166699F2001B866A /* UIKit.framework */; };
-		21E047F5166699F2001B866A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E047D0166699F2001B866A /* Foundation.framework */; };
-		21E047FD166699F2001B866A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21E047FB166699F2001B866A /* InfoPlist.strings */; };
-		21E04800166699F2001B866A /* coreDataInMemoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E047FF166699F2001B866A /* coreDataInMemoryTests.m */; };
 		21E0480B16672F53001B866A /* FinanceModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21E0480916672F53001B866A /* FinanceModel.xcdatamodeld */; };
 		21E0483F16675697001B866A /* DatabaseWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0483E16675697001B866A /* DatabaseWriter.m */; };
 		21F6FFBB1668C5EC00C5C5AD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F6FFBA1668C5EC00C5C5AD /* CoreData.framework */; };
@@ -56,16 +50,6 @@
 		21F95B10166BBA610045AE2E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F95B0F166BBA610045AE2E /* RootViewController.m */; };
 		21F95B1C166DE4500045AE2E /* DBAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F95B1B166DE4500045AE2E /* DBAPI.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		21E047F6166699F2001B866A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 21E047C1166699F2001B866A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 21E047C9166699F2001B866A;
-			remoteInfo = familyFinance;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		210106701676187A00ACA12B /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
@@ -90,8 +74,8 @@
 		215E40391677430700757B69 /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnitIOS.framework; path = "../External/gh-unit/Project-iOS/build/Framework/GHUnitIOS.framework"; sourceTree = "<group>"; };
 		215E403B167743CF00757B69 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		215E404016774A5400757B69 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
-		215E40431677502400757B69 /* TransactionTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionTestCase.h; sourceTree = "<group>"; };
-		215E40441677502400757B69 /* TransactionTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionTestCase.m; sourceTree = "<group>"; };
+		215E40431677502400757B69 /* DBModelsAPITestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBModelsAPITestCase.h; sourceTree = "<group>"; };
+		215E40441677502400757B69 /* DBModelsAPITestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBModelsAPITestCase.m; sourceTree = "<group>"; };
 		21A541E51668B87B00B1F45E /* familyFinance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = familyFinance.entitlements; sourceTree = "<group>"; };
 		21A541E71668BC8000B1F45E /* CategoryAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryAPI.h; path = familyFinance/CategoryAPI.h; sourceTree = "<group>"; };
 		21A541E81668BC8000B1F45E /* CategoryAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryAPI.m; path = familyFinance/CategoryAPI.m; sourceTree = "<group>"; };
@@ -110,12 +94,7 @@
 		21E047E0166699F2001B866A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		21E047E2166699F2001B866A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		21E047E4166699F2001B866A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		21E047F1166699F2001B866A /* familyFinanceTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = familyFinanceTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21E047F2166699F2001B866A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		21E047FA166699F2001B866A /* familyFinanceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "familyFinanceTests-Info.plist"; sourceTree = "<group>"; };
-		21E047FC166699F2001B866A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		21E047FE166699F2001B866A /* coreDataInMemoryTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = coreDataInMemoryTests.h; sourceTree = "<group>"; };
-		21E047FF166699F2001B866A /* coreDataInMemoryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = coreDataInMemoryTests.m; sourceTree = "<group>"; };
 		21E0480A16672F53001B866A /* FinanceModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinanceModel.xcdatamodel; sourceTree = "<group>"; };
 		21E0483D16675697001B866A /* DatabaseWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseWriter.h; sourceTree = "<group>"; };
 		21E0483E16675697001B866A /* DatabaseWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseWriter.m; sourceTree = "<group>"; };
@@ -123,7 +102,6 @@
 		21F6FFBD1668CBDB00C5C5AD /* CurrencyAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CurrencyAPI.h; path = familyFinance/CurrencyAPI.h; sourceTree = "<group>"; };
 		21F6FFBE1668CBDB00C5C5AD /* CurrencyAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CurrencyAPI.m; path = familyFinance/CurrencyAPI.m; sourceTree = "<group>"; };
 		21F6FFC11668CC3400C5C5AD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		21F6FFC21668CC3400C5C5AD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		21F6FFCA1668DAB400C5C5AD /* ExpenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseViewController.h; sourceTree = "<group>"; };
 		21F6FFCB1668DAB400C5C5AD /* ExpenseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseViewController.m; sourceTree = "<group>"; };
 		21F95B0E166BBA610045AE2E /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
@@ -158,17 +136,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		21E047ED166699F2001B866A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				214B258B166E311300B7AB5B /* CoreData.framework in Frameworks */,
-				21E047F3166699F2001B866A /* SenTestingKit.framework in Frameworks */,
-				21E047F4166699F2001B866A /* UIKit.framework in Frameworks */,
-				21E047F5166699F2001B866A /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -176,8 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				215E4024167742B000757B69 /* Supporting Files */,
-				215E40431677502400757B69 /* TransactionTestCase.h */,
-				215E40441677502400757B69 /* TransactionTestCase.m */,
+				215E40431677502400757B69 /* DBModelsAPITestCase.h */,
+				215E40441677502400757B69 /* DBModelsAPITestCase.m */,
 			);
 			path = GHTests;
 			sourceTree = "<group>";
@@ -209,7 +176,6 @@
 			children = (
 				21E047D4166699F2001B866A /* familyFinance */,
 				21E047CB166699F2001B866A /* Products */,
-				21E047F8166699F2001B866A /* familyFinanceTests */,
 				215E4023167742B000757B69 /* GHTests */,
 				21E047CD166699F2001B866A /* Frameworks */,
 				215E404216774B5D00757B69 /* static_lib */,
@@ -220,7 +186,6 @@
 			isa = PBXGroup;
 			children = (
 				21E047CA166699F2001B866A /* familyFinance.app */,
-				21E047F1166699F2001B866A /* familyFinanceTests.octest */,
 				215E401E167742B000757B69 /* GHTests.app */,
 			);
 			name = Products;
@@ -267,25 +232,6 @@
 				21E047E0166699F2001B866A /* Default.png */,
 				21E047E2166699F2001B866A /* Default@2x.png */,
 				21E047E4166699F2001B866A /* Default-568h@2x.png */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		21E047F8166699F2001B866A /* familyFinanceTests */ = {
-			isa = PBXGroup;
-			children = (
-				21E047FE166699F2001B866A /* coreDataInMemoryTests.h */,
-				21E047FF166699F2001B866A /* coreDataInMemoryTests.m */,
-				21E047F9166699F2001B866A /* Supporting Files */,
-			);
-			path = familyFinanceTests;
-			sourceTree = "<group>";
-		};
-		21E047F9166699F2001B866A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				21E047FA166699F2001B866A /* familyFinanceTests-Info.plist */,
-				21E047FB166699F2001B866A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -373,25 +319,6 @@
 			productReference = 21E047CA166699F2001B866A /* familyFinance.app */;
 			productType = "com.apple.product-type.application";
 		};
-		21E047F0166699F2001B866A /* familyFinanceTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 21E04806166699F2001B866A /* Build configuration list for PBXNativeTarget "familyFinanceTests" */;
-			buildPhases = (
-				21E047EC166699F2001B866A /* Sources */,
-				21E047ED166699F2001B866A /* Frameworks */,
-				21E047EE166699F2001B866A /* Resources */,
-				21E047EF166699F2001B866A /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				21E047F7166699F2001B866A /* PBXTargetDependency */,
-			);
-			name = familyFinanceTests;
-			productName = familyFinanceTests;
-			productReference = 21E047F1166699F2001B866A /* familyFinanceTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -416,7 +343,6 @@
 			projectRoot = "";
 			targets = (
 				21E047C9166699F2001B866A /* familyFinance */,
-				21E047F0166699F2001B866A /* familyFinanceTests */,
 				215E401D167742B000757B69 /* GHTests */,
 			);
 		};
@@ -445,31 +371,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		21E047EE166699F2001B866A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				21E047FD166699F2001B866A /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		21E047EF166699F2001B866A /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		215E401A167742B000757B69 /* Sources */ = {
@@ -477,7 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				215E402A167742B100757B69 /* main.m in Sources */,
-				215E40451677502400757B69 /* TransactionTestCase.m in Sources */,
+				215E40451677502400757B69 /* DBModelsAPITestCase.m in Sources */,
 				215E40711677887900757B69 /* CurrencyAPI.m in Sources */,
 				215E40721677889300757B69 /* DBAPI.m in Sources */,
 				215E40731677889D00757B69 /* CategoryAPI.m in Sources */,
@@ -509,23 +411,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		21E047EC166699F2001B866A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				21E04800166699F2001B866A /* coreDataInMemoryTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		21E047F7166699F2001B866A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 21E047C9166699F2001B866A /* familyFinance */;
-			targetProxy = 21E047F6166699F2001B866A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		215E4026167742B000757B69 /* InfoPlist.strings */ = {
@@ -541,15 +427,6 @@
 			children = (
 				21E047D8166699F2001B866A /* en */,
 				21F6FFC11668CC3400C5C5AD /* ru */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		21E047FB166699F2001B866A /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				21E047FC166699F2001B866A /* en */,
-				21F6FFC21668CC3400C5C5AD /* ru */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -689,42 +566,6 @@
 			};
 			name = Release;
 		};
-		21E04807166699F2001B866A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/familyFinance.app/familyFinance";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "familyFinance/familyFinance-Prefix.pch";
-				INFOPLIST_FILE = "familyFinanceTests/familyFinanceTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_AFTER_BUILD = NO;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		21E04808166699F2001B866A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/familyFinance.app/familyFinance";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "familyFinance/familyFinance-Prefix.pch";
-				INFOPLIST_FILE = "familyFinanceTests/familyFinanceTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_AFTER_BUILD = NO;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -751,15 +592,6 @@
 			buildConfigurations = (
 				21E04804166699F2001B866A /* Debug */,
 				21E04805166699F2001B866A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		21E04806166699F2001B866A /* Build configuration list for PBXNativeTarget "familyFinanceTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				21E04807166699F2001B866A /* Debug */,
-				21E04808166699F2001B866A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

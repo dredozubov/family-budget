@@ -14,5 +14,7 @@ extern NSString * const EXPENSE_COMMENT_CATEGORY;
 
 @interface CommentAPI: DBAPI
 
+- (Comment *)findByText:(NSString *)text;
+
 @end
 

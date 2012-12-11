@@ -14,5 +14,6 @@ extern NSString * const CURRENCY_CODE;
 @interface CurrencyAPI: DBAPI
 
 - (void)insertWithCode:(NSString *)code;
+- (Currency *)findByCode:(NSString *)code;
 
 @end

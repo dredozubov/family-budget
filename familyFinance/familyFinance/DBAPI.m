@@ -47,7 +47,6 @@
 - (NSArray *)findAll
 {
     NSString *entity = [self getEntity];
-    NSLog(@"entity: %@", entity);
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:entity];
     request.predicate = nil;
     
@@ -61,7 +60,6 @@
 - (NSArray *)findAllAndSortBy:(NSSortDescriptor *)sortDescriptor // nil for empty sort descriptor
 {
     NSString *entity = [self getEntity];
-    NSLog(@"entity: %@", entity);
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:entity];
     request.predicate = nil;
     request.sortDescriptors = [NSArray arrayWithObject:sortDescriptor];

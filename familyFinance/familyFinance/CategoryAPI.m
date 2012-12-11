@@ -27,4 +27,29 @@ NSString * const CATEGORY_IMAGE_DATA = @"image";
     }
 }
 
+
+- (Category *)findByName:(NSString *)name
+{
+    NSEntityDescription *entityDescription = [NSEntityDescription
+                                              entityForName:@"Category" inManagedObjectContext:self.context];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDescription];
+    NSPredicate *foodPredicate = [NSPredicate predicateWithFormat:@"(name ==[c] %@)", name];
+    [request setEntity:entityDescription];
+    [request setPredicate:foodPredicate];
+    
+    NSError *error = nil;
+    NSArray *array = [self.context executeFetchRequest:request error:&error];
+    if (error) {
+        NSLog(@"unable to findByName with name = %@:%@", name, error);
+        abort();
+    }
+    if ([array count] > 1) {
+        NSLog(@"duplicated values in findByName with name = %@", name);
+        abort();
+    }
+    return [array objectAtIndex:0];
+}
+
+
 @end

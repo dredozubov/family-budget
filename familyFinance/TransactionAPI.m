@@ -12,5 +12,4 @@ NSString * const TRANSACTION_AMOUNT = @"amount";
 
 @implementation TransactionAPI
 
-
 @end

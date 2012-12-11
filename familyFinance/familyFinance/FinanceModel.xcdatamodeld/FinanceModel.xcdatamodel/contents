@@ -2,7 +2,7 @@
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C60" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Account" syncable="YES"/>
     <entity name="Category" representedClassName="Category" syncable="YES">
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="rating" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="comment" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Comment" inverseName="category" inverseEntity="Comment" syncable="YES"/>
         <relationship name="transaction" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="category" inverseEntity="Transaction" syncable="YES"/>
@@ -10,7 +10,7 @@
     <entity name="Comment" representedClassName="Comment" syncable="YES">
         <attribute name="rating" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="category" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Category" inverseName="comment" inverseEntity="Category" syncable="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="comment" inverseEntity="Category" syncable="YES"/>
         <relationship name="transaction" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="comment" inverseEntity="Transaction" syncable="YES"/>
     </entity>
     <entity name="Currency" representedClassName="Currency" syncable="YES">
