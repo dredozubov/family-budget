@@ -49,6 +49,8 @@
 		21F6FFCC1668DAB400C5C5AD /* ExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F6FFCB1668DAB400C5C5AD /* ExpenseViewController.m */; };
 		21F95B10166BBA610045AE2E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F95B0F166BBA610045AE2E /* RootViewController.m */; };
 		21F95B1C166DE4500045AE2E /* DBAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F95B1B166DE4500045AE2E /* DBAPI.m */; };
+		223FD8771677DB3500412713 /* GainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223FD8761677DB3500412713 /* GainViewController.m */; };
+		223FD87B1677DC9200412713 /* ReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223FD87A1677DC9200412713 /* ReportViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +110,11 @@
 		21F95B0F166BBA610045AE2E /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		21F95B1A166DE4500045AE2E /* DBAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBAPI.h; path = familyFinance/DBAPI.h; sourceTree = "<group>"; };
 		21F95B1B166DE4500045AE2E /* DBAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBAPI.m; path = familyFinance/DBAPI.m; sourceTree = "<group>"; };
+		223FD8751677DB3500412713 /* GainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GainViewController.h; sourceTree = "<group>"; };
+		223FD8761677DB3500412713 /* GainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GainViewController.m; sourceTree = "<group>"; };
+		223FD8791677DC9200412713 /* ReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportViewController.h; sourceTree = "<group>"; };
+		223FD87A1677DC9200412713 /* ReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportViewController.m; sourceTree = "<group>"; };
+		22E5C7FA1677D7720072A416 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +215,7 @@
 		21E047D4166699F2001B866A /* familyFinance */ = {
 			isa = PBXGroup;
 			children = (
+				22E5C7FA1677D7720072A416 /* iPhone.storyboard */,
 				21433B85166F809800A3F098 /* Macros.h */,
 				21A541E51668B87B00B1F45E /* familyFinance.entitlements */,
 				21E047DD166699F2001B866A /* AppDelegate.h */,
@@ -259,6 +267,10 @@
 				21F95B0F166BBA610045AE2E /* RootViewController.m */,
 				21F6FFCA1668DAB400C5C5AD /* ExpenseViewController.h */,
 				21F6FFCB1668DAB400C5C5AD /* ExpenseViewController.m */,
+				223FD8751677DB3500412713 /* GainViewController.h */,
+				223FD8761677DB3500412713 /* GainViewController.m */,
+				223FD8791677DC9200412713 /* ReportViewController.h */,
+				223FD87A1677DC9200412713 /* ReportViewController.m */,
 			);
 			name = ViewControllers;
 			path = ..;
@@ -408,6 +420,8 @@
 				2101067B1676187A00ACA12B /* Category.m in Sources */,
 				2101067E16761BAA00ACA12B /* TransactionAPI.m in Sources */,
 				2101068116761BF500ACA12B /* Transaction.m in Sources */,
+				223FD8771677DB3500412713 /* GainViewController.m in Sources */,
+				223FD87B1677DC9200412713 /* ReportViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
