@@ -51,6 +51,7 @@
 		21F95B1C166DE4500045AE2E /* DBAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F95B1B166DE4500045AE2E /* DBAPI.m */; };
 		223FD8771677DB3500412713 /* GainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223FD8761677DB3500412713 /* GainViewController.m */; };
 		223FD87B1677DC9200412713 /* ReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223FD87A1677DC9200412713 /* ReportViewController.m */; };
+		22CBD18F168E434F00EE8A63 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22CBD18E168E434F00EE8A63 /* iPhone.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,7 +115,7 @@
 		223FD8761677DB3500412713 /* GainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GainViewController.m; sourceTree = "<group>"; };
 		223FD8791677DC9200412713 /* ReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportViewController.h; sourceTree = "<group>"; };
 		223FD87A1677DC9200412713 /* ReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportViewController.m; sourceTree = "<group>"; };
-		22E5C7FA1677D7720072A416 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = SOURCE_ROOT; };
+		22CBD18E168E434F00EE8A63 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,8 +216,8 @@
 		21E047D4166699F2001B866A /* familyFinance */ = {
 			isa = PBXGroup;
 			children = (
-				22E5C7FA1677D7720072A416 /* iPhone.storyboard */,
 				21433B85166F809800A3F098 /* Macros.h */,
+				22CBD18E168E434F00EE8A63 /* iPhone.storyboard */,
 				21A541E51668B87B00B1F45E /* familyFinance.entitlements */,
 				21E047DD166699F2001B866A /* AppDelegate.h */,
 				21E047DE166699F2001B866A /* AppDelegate.m */,
@@ -380,6 +381,7 @@
 				21E047E1166699F2001B866A /* Default.png in Resources */,
 				21E047E3166699F2001B866A /* Default@2x.png in Resources */,
 				21E047E5166699F2001B866A /* Default-568h@2x.png in Resources */,
+				22CBD18F168E434F00EE8A63 /* iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

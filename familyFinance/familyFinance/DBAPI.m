@@ -84,6 +84,8 @@
     if (![context save:&error]) {
         NSLog(@"Error while inserting new ExpenseComment: %@, %@", error, [error userInfo]);
         abort();
+    } else {
+        NSLog(@"Add into DB: %@",[self getEntity]);
     }
 }
 

@@ -50,9 +50,10 @@
 
 - (void)fetchInitialDataIntoDocument
 {
+    /*
     dispatch_queue_t fetchQ = dispatch_queue_create("DB", NULL);
     // reading our initial data storage in another thread
-    dispatch_async(fetchQ, ^{
+    dispatch_async(fetchQ, ^{*/
         NSLog(@"Prepopulating Database!");
         
         
@@ -145,21 +146,32 @@
             for (id com in Comments) {
                 [self.comment insertWithDict:com];
             }
-            NSLog(@"comments are: %@", [self.comment findAll]);
+            NSLog(@"categories are: %@", [self.category findAll]);
         }];
-    });
     
+    /*
+    });
+    */
     // removing this is safe for IOS 6 in ARC mode
-    // dispatch_release(fetchQ);
+    //dispatch_release(fetchQ);
 }
 
 - (void)useDocument {
-    if (![[NSFileManager defaultManager] fileExistsAtPath:[self.document.fileURL path]]) {
-        NSURL *url = self.document.fileURL;
+    NSLog(@"useDocument");
+    
+    NSURL *url = self.document.fileURL;
+    
+    BOOL isFileExistsAtPath = [[NSFileManager defaultManager] fileExistsAtPath:[url path]];
+    
+    
+    if (  !isFileExistsAtPath  ) {
+        
+        NSLog(@"Try to create file");
+        
         [self.document saveToURL:url forSaveOperation:UIDocumentSaveForCreating completionHandler:^(BOOL success) {
             if (success)
             {
-                // db don't exist, it's THE place to populate it with initial data
+                NSLog(@"We open file forSaveOperation");
                 [self fetchInitialDataIntoDocument];
                 [self documentIsReady];
             } else
@@ -167,20 +179,34 @@
                 NSLog(@"couldn't open document at %@", url);
             }
         }];
+        
+        
     } else if (self.document.documentState == UIDocumentStateClosed) {
+        
+         NSLog(@"UIDocumentStateClosed / Lets try to openWithCompletionHandler");
+        
         [self.document openWithCompletionHandler:^(BOOL success) {
-            // error handling
-            [self documentIsReady];
-            NSLog(@"logging: UIDocumentStateClosed");
-            NSLog(@"opened after completionHandler: %d", self.document.documentState == UIDocumentStateNormal);
+            if (success) {
+                 NSLog(@"UIDocumentStateClosed / OK");
+                [self documentIsReady];
+            } else {
+                 NSLog(@"UIDocumentStateClosed / ERROR");
+            }
         }];
+    
+    
     } else if (self.document.documentState == UIDocumentStateNormal) {
+        
+        
         [self documentIsReady];
-        NSLog(@"DatabaseWriter OK");
+        NSLog(@"UIDocumentStateNormal");
+        
+        
     }
 }
 
 - (void)setDocument:(UIManagedDocument *)fDatabase {
+    NSLog(@"setDocument");
     if (_document != fDatabase) {
         _document = fDatabase;
         [self useDocument];

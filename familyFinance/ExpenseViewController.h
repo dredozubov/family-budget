@@ -14,6 +14,7 @@
 - (IBAction)addExpense:(UIButton *)sender;
 - (IBAction)saveCategory:(UIBarButtonItem *)sender;
 
+
 @property (weak, nonatomic) IBOutlet UITextField *expenseTextField;
 @property (weak, nonatomic) IBOutlet UIButton *categoryButton;
 @property (weak, nonatomic) IBOutlet UIView *categoryViewContainer;

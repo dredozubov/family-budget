@@ -10,14 +10,19 @@
 #import "DatabaseWriter.h"
 #import "Category.h"
 #import "Comment.h"
+#import "CommentAPI.h"
 #import "Currency.h"
+#import "CurrencyAPI.h"
 #import "Transaction.h"
+#import "TransactionAPI.h"
 
 @interface ExpenseViewController ()
 
 @property (strong, nonatomic) DatabaseWriter *databaseWriter;
 @property (strong, nonatomic) NSArray *categoriesArray;
 @property (nonatomic) NSInteger selectedCategoryIndex;
+
+@property (nonatomic, retain) NSManagedObjectContext *context;
 
 @end
 
@@ -29,6 +34,7 @@
 @synthesize expenseTextField;
 @synthesize commentTextView;
 
+@synthesize context = _context;
 @synthesize databaseWriter = _databaseWriter;
 @synthesize categoriesArray = _categoriesArray;
 @synthesize selectedCategoryIndex;
@@ -37,30 +43,30 @@
 {
     if (!_databaseWriter) {
         _databaseWriter = [[DatabaseWriter alloc] init];
-        NSLog(@"databaseWriter");
+        
+        NSLog(@"ExpenseViewController: databaseWriter");
     }
+    
     return _databaseWriter;
 }
 
 - (NSArray *) categoriesArray
 {
+
+    
+
+    
     if (!_categoriesArray) {
-        NSLog(@"categoriesArray");
+        NSLog(@"Before: categoriesArray");
         _categoriesArray = [[self.databaseWriter category] findAll];
+        NSLog(@"After: categoriesArray, %d", [_categoriesArray count]);
     }
+        
+    
     
     return _categoriesArray;
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -68,7 +74,6 @@
     
     self.selectedCategoryIndex = -1;
     
-    [super viewDidLoad];
     
     UIToolbar* numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
     numberToolbar.barStyle = UIBarStyleBlackTranslucent;
@@ -79,6 +84,17 @@
                            nil];
     [numberToolbar sizeToFit];
     expenseTextField.inputAccessoryView = numberToolbar;
+}
+
+- (id)initWithCoder:(NSCoder *)decoder
+{
+    if(self = [super initWithCoder:decoder]) {
+        NSLog(@"init");
+        [self databaseWriter];
+    }
+    
+    return self;
+    //if ([self databaseWriter]) { };
 }
 
 -(void)cancelNumberPad{
@@ -111,32 +127,28 @@
     
     if (selectedCategoryIndex == -1) return;
     
-
-    Category *category = [self.categoriesArray objectAtIndex:selectedCategoryIndex];
     
     NSNumberFormatter *decimalFormat = [[NSNumberFormatter alloc] init];
     [decimalFormat setNumberStyle:NSNumberFormatterDecimalStyle];
-    NSDecimalNumber *amount = [decimalFormat numberFromString:expenseTextField.text];
+    NSNumber *amount = [decimalFormat numberFromString:expenseTextField.text];
     
-    if (amount <= 0) return;
+    //if (amount <= 0) return;
     
-    Comment *comment = [[Comment alloc] init];
-    
-    comment.text = [commentTextView text];
-    
-    Currency *currency = [[Currency alloc] init];
-    currency.code = @"RUB";
     
 
-    Transaction *transaction = [[Transaction alloc] init];
+    Category *category = [self.categoriesArray objectAtIndex:selectedCategoryIndex];
+    Comment *comment = [self.databaseWriter.comment findByText:@"restaraunt"];
+    Currency *currency = [self.databaseWriter.currency findByCode:@"RUB"];
     
-    transaction.added_on = [NSDate date];
-    transaction.amount = amount;
-    transaction.type = [NSNumber numberWithInt:1];
-    transaction.category = category;
-    transaction.comment = comment;
-    transaction.currency = currency;
-    
+    NSDictionary *data = [NSDictionary dictionaryWithObjectsAndKeys:
+                                       currency, @"currency",
+                                       category, @"category",
+                                       comment, @"comment",
+                                       [NSDate date], @"added_on",
+                                       amount, @"amount",
+                                       0, @"type",
+                          nil];
+    [self.databaseWriter.transaction insertWithDict:data];
 
 }
 
